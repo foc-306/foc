@@ -1,0 +1,56 @@
+
+.navber-default-add{
+            background-color:rgba(15, 172, 243,07);
+            box-shadow:0px 0px 20px rgba(15, 172, 243, 0.4)
+        }
+        .navbar-default .navbar-nav > li > a{
+            color:#fff;
+        }
+        .navbar-default{
+            border-color:#0facf3;
+        }
+
+        .navbar-default .navbar-nav > li > a:hover{
+            color:#0facf3;
+            background-color: #fff;
+        }
+
+        .navbar-default .navbar-nav > .open > a:hover{
+            color:#2a76ff;
+            background-color:#fff;
+        }
+        .navbar-default .navbar-nav > li > a:focus{
+            color:#0facf3;
+            background-color: #fff;
+            border-bottom: 3px solid #2a76ff;
+        }
+        .navbar-default .navbar-nav > .active > a{
+            color:#2a76ff;
+            background-color:#fff;
+            border-bottom: 3px solid #2a76ff;
+        }
+        .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover{
+            color:#2a76ff;
+            background-color:#fff;
+        }
+
+        .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover{
+            color:#0facf3;
+            background-color:#fff;
+        }
+
+        .navbar-default .navbar-toggle {
+            border-color: #fff;
+        }
+        .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+            background-color: #fff;
+        }
+        .navbar-default .navbar-toggle .icon-bar {
+            background-color: #fff;
+        }
+        .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+            background-color: #2a76ff;
+        }
+.navbar-default .navbar-nav > li > a{
+            transition: all 0.5s;
+        }
