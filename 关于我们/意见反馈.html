@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>爱学-意见反馈</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="keywords" content="Bootstrap Responsive Templates, Iphone Compatible Templates, Smartphone Compatible Templates, Ipad Compatible Templates, Flat Responsive Templates"/>
+    <link href="../css/bootstrap/bootstrap.min.css" rel='stylesheet' type='text/css'>
+    <link href="../css/style.css" rel='stylesheet' type='text/css' />
+    <link href="../css/sidebar.css" rel='stylesheet' type='text/css' />
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <style>
+        .leftOne{
+            box-shadow:0 0 0 #000;
+            margin-top:15px;
+        }
+
+        .leftOne div ul li{
+
+        }
+        .leftTwo{
+            float:left;
+            padding-left:0;
+            box-shadow:0 0 7px #808080;
+
+        }
+
+        .leftTwo li{
+            list-style-type:none;
+            background-color:#fff;
+            width:260px;
+            height:60px;
+            border-bottom:1px solid rgba(96 , 96, 96, 0.3);
+            border-left:5px solid #fff;
+            border-right:5px solid #fff;
+            text-align:center;
+            line-height:60px;
+        }
+        .leftTwo li a{
+            text-decoration:none;
+            color:rgba(96 , 96, 96, 0.7);
+        }
+        .leftTwo li a:hover{
+            color:#0facf3;
+            transition:0s;
+        }
+        .leftTwo li a:focus{
+            color:#0facf3;
+        }
+        .leftTwo li a:hover{
+            color:#0facf3;
+        }
+        .footer{
+            margin-top: 10px;
+            background-color:#0facf3;
+        }
+
+        .btn-primary:hover {
+            color: #fff;
+            background-color: #0facf3;
+            border-color: #fff;
+            transition: all 0.3s;
+        }
+        .btn-primary:active, .open > .dropdown-toggle.btn-primary {
+            color: #fff;
+            background-color: #0facf3;
+            border-color: #fff;
+        }
+        .btn-primary.focus, .btn-primary:focus {
+            color: #fff;
+            background-color: #0facf3;
+            border-color: #fff;
+        }
+        .btn-add{
+            width:95px;
+            height:35px;
+            border-radius:25px;
+            border:2px solid #0facf3;
+            color:#0facf3;
+            background-color: rgba(0 , 0, 0 , 0);
+            position:absolute;
+            right:15px;
+            top:10px;
+        }
+        /*主页登录按钮改良版*/
+
+        textarea.form-control {
+            height: 250px;
+            resize: none;
+        }
+
+
+        .modal {
+            position: fixed;
+            top: 200px;
+        }
+    </style>
+
+    <script>
+      	
+    </script>
+</head>
+<body style="background-color:#f5f6f7">
+<div class="banner1" id="home">
+
+    <div class="header">
+        <div class="menu">
+            <a class="toggleMenu" href="#" style="color:#0facf3;"><span class="glyphicon glyphicon-menu-hamburger" style="font-size:30px;"> </span></a>
+            <ul class="nav" id="nav">
+                <li><a href="../index.html">主页</a></li>
+                <li><a href="../about.html">免费课程</a></li>
+                <li><a href="../live.html">课程直播</a></li>
+                <li><a href="../forum.html">论坛</a></li>
+                <li><a href="../courses0.html">学习天地</a></li>
+                <li class="active"><a href="../contact.html" class="active">意见反馈</a></li>
+            </ul>
+            <!----start-top-nav-script---->
+            <script type="text/javascript" src="../js/responsive-nav.js"></script>
+            <script type="text/javascript">
+                jQuery(document).ready(function($) {
+                    $(".scroll").click(function(event){
+                        event.preventDefault();
+                        $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+                    });
+                });
+            </script>
+            <!----//End-top-nav-script---->
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+    <!--/start-text-slider-->
+</div>
+
+
+
+<section class="leftOne">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul class="leftTwo">
+                    <li><a href="关于我们.html">关于我们</a></li>
+                    <li><a href="团队介绍.html">团队介绍</a></li>
+                    <li><a href="人才招聘.html">人才招聘</a></li>
+                    <li><a href="讲师招募.html">讲师招募</a></li>
+                    <li><a href="讲师资料.html">讲师资料</a></li>
+                    <li class="active" style="border-left:5px solid #0facf3;"><a href="意见反馈.html">意见反馈</a></li>
+                </ul>
+            </div>
+            <div class="col-md-9" style="min-height:675px;background-color:#fff;float:left;box-shadow: 0 0 7px #808080;">
+                <div class="col-md-12" style="margin:15px 15px 15px 15px;">
+                    <h4><span class="glyphicon glyphicon-edit" style="margin-right: 10px;"></span>我要反馈</h4>
+                    <p style="color:#959191;font-size:15px;">尊敬的爱学网用户:</p>
+                    <p style="color:#959191;font-size:15px;">您在爱学网遇到产品使用的问题,请在这里告诉我们,或者添加爱学网客服官方QQ (1214145156) 进行反馈.</p>
+                    <p style="color:#959191;font-size:15px;">我们的工作人员会及时处理,多谢您的宝贵意见!</p>
+                </div>
+                <div class="col-md-12" style="margin-top: 20px;">
+                    <label>反馈内容</label>
+                    <textarea class="form-control"  rows="3" placeholder='输入的字数请勿超过1300个字' maxlength="255"></textarea>
+                    <p style="width: 52px;position: absolute;right: 15px;color:#959191">1300字</p>
+                </div>
+                <div class="col-md-12" style="margin-top: 10px;">
+                    <label><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"> 联系方式</span></label>
+                    <input type="text" id="inputNum" class="form-control" placeholder="请输入姓名" style="width: 50%;margin-bottom: 10px">
+                    <input type="text" id="inputNum2" class="form-control" placeholder="请输入电话号码" style="width: 50%;display: inline;margin-bottom: 10px">
+                    <input type="text" id="inputNum3" class="form-control" placeholder="请输入电子邮箱" style="width: 50%;display: inline;margin-bottom: 10px">
+                </div>
+
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-primary btn-add" data-toggle="modal" data-target="#myModal">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                提交成功
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="footer">
+    <div class="container">
+        <div class="footer-main">
+            <div class="col-md-12 footer-right">
+                <p>版权所有©爱学网 | 地址：南昌市西湖区安石路69号 | QQ：850959941 | 京ICP备00000001号-1 | 京公网安备 21325451654 号 </p>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>话题</title>
+<meta name="viewport" charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<link href="css/bootstrap/bootstrap.min.css" rel='stylesheet' type='text/css'>
+<link href="css/layer.css" rel='stylesheet' type='text/css'>
+
+<script src="js/jquery.min.js"></script>  
+<script src="js/forum.js"></script>  
+<script src="js/layer.js"></script>  
+<style>
+body{
+	background: #f5f6f7;
+}
+.main{
+	padding-top: 30px;
+	padding: 10px 30px;
+}
+textarea{
+	width: 100%;
+}
+div{
+	padding: 0px;
+}
+</style>
+</head>
+<body>
+	<script>console.log(parent.location.href)</script>
+	<div class="main">
+		<form id="postedForm" onsubmit="return false;" >
+			<div class="row">
+				<div class="col-md-11 col-xs-10">
+				  <input type="text" class="form-control" name="title" placeholder="请输入标题" aria-describedby="basic-addon1">
+				</div>
+				<div class="col-md-1 col-xs-2">
+				  <button id="posted" class="btn btn-primary">发帖</button>
+				</div>
+			</div>
+			<br>
+			<textarea rows="10" name="content"></textarea>
+		</form>
+	</div>
+</body>
+</html>

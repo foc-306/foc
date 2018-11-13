@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="keywords" content="Bootstrap Responsive Templates, Iphone Compatible Templates, Smartphone Compatible Templates, Ipad Compatible Templates, Flat Responsive Templates"/>
+    <link href="css/bootstrap/bootstrap.min.css" rel='stylesheet' type='text/css'>
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <link href="css/sidebar.css" rel='stylesheet' type='text/css' />
+
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
+    <script src="js/city.js"></script>
+
+    <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            var filterList = {
+
+                init: function () {
+
+                    // MixItUp plugin
+                    // http://mixitup.io
+                    $('#portfoliolist').mixitup({
+                        targetSelector: '.portfolio',
+                        filterSelector: '.filter',
+                        effects: ['fade'],
+                        easing: 'snap',
+                        // call the hover effect
+                        onMixEnd: filterList.hoverEffect()
+                    });
+
+                },
+
+                hoverEffect: function () {
+
+                    // Simple parallax effect
+                    $('#portfoliolist .portfolio').hover(
+                        function () {
+                            $(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+                            $(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');
+                        },
+                        function () {
+                            $(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+                            $(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');
+                        }
+                    );
+
+                }
+
+            };
+
+            // Run the show!
+            filterList.init();
+
+
+        });
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+    <style type="text/css">
+        .my{
+            margin-top:30px;
+            margin-bottom: 15px;
+        }
+        .container-fluid{
+            width:95%;
+        }
+        /*总的控制*/
+
+        .top a{
+            color:#fff;
+        }
+        .top img{
+            border-radius:4px;
+            width:150px;
+            border:1px solid #DAE0E4;
+        }
+        .top > div{
+            background-color:#444;
+            height:200px;
+            border: 1px solid #DAE0E4;
+            box-shadow: 0 1px 2px 0 rgba(158,172,182,.2);
+        }
+        .top div > div{
+            margin-top:15px;
+        }
+        /*个人信息栏,包含头像*/
+
+        .ann{
+            background-color:#fff;
+            min-height:650px;
+            height:100%;
+            border: 1px solid #DAE0E4;
+            margin-top:15px;
+        }
+
+        .btnLeft a{
+            color:#555;
+            text-decoration:none;
+            line-height: 45px;
+        }
+        .btnLeft div{
+            margin:10px 0 10px 0;
+            background-color:#fff;
+        }
+        .btnLeft div:hover{
+            background-color:#f5f5f5;
+            transition:0.3s;
+        }
+        /*
+        .btnLeft a:active{
+            background-color:#333;
+        }
+        .btnLeft a:focus{
+            background-color:#333;
+        }
+        */
+
+
+        .glyphicon-chevron-right{
+            position: relative;
+            top: 2px;
+            left:25px;
+        }
+        /*按钮旁边的bootstrap组件*/
+
+        .form-control {
+            width: 25%;
+        }
+        .form-control[readonly]{
+            background-color:#fff;
+        }
+        /*个人信息的input*/
+
+        h3{
+            font-size: 2em;
+            color: #333;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+        /*大字样式*/
+
+        .boxRight > div{
+            background-color:#fff;
+            min-height:650px;
+            border: 1px solid #DAE0E4;
+            height:100%;
+            margin-top:15px;
+        }
+        .boxRight-two h4{
+            margin:10px 0 0 0;
+            padding:5px 0 5px 5px;
+            background-color: #fff;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            border-bottom:0 solid #ddd;
+        }
+        .boxRight-two a{
+            margin: 0 0 0 15px;
+            line-height: 40px
+        }
+        .list-group-item{
+            height: 68px;
+        }
+        /*控制右边页面*/
+
+        .btn-primary:hover {
+            color: #fff;
+            background-color: #0facf3;
+            border-color: #fff;
+            transition: all 0.3s;
+        }
+        .btn-primary:active, .open > .dropdown-toggle.btn-primary {
+            color: #fff;
+            background-color: #0facf3;
+            border-color: #fff;
+        }
+        .btn-primary.focus, .btn-primary:focus {
+            color: #fff;
+            background-color: #0facf3;
+            border-color: #fff;
+        }
+        .btn-add{
+            width:95px;
+            height:35px;
+            border-radius:25px;
+            border:2px solid #0facf3;
+            color:#0facf3;
+            background-color: rgba(0 , 0, 0 , 0)
+        }
+        /*个人信息下面按钮,主页按钮改良版*/
+
+        .badge {
+            background-color: #5bc0de;
+        }
+        /*徽章-消息数量提醒*/
+
+        #portfoliolist .portfolio {
+            width: 70%;
+        }
+        ul#filters {
+            margin: 1em 0 1em 0;
+        }
+        #filters li {
+            margin: 0 0;
+        }
+
+
+
+        .city1{
+
+        }
+        .city2{
+
+        }
+
+    </style>
+</head>
+<body style="background-color:#f5f6f7">
+<!--start-home-->
+<div class="banner1" id="home">
+
+    <div class="header">
+        <div class="menu">
+            <a class="toggleMenu" href="#" style="color:#0facf3;"><span class="glyphicon glyphicon-menu-hamburger" style="font-size:30px;"></span> </a>
+            <ul class="nav" id="nav">
+                <li class="active"><a href="index.html" class="active">主页</a></li>
+                <li><a href="about.html">免费课程</a></li>
+                <li><a href="live.html">课程直播</a></li>
+                <li><a href="admissions.html">论坛</a></li>
+                <li><a href="courses0.html">学习天地</a></li>
+                <li><a href="关于我们/关于我们.html">关于我们</a></li>
+            </ul>
+            <!----start-top-nav-script---->
+            <script type="text/javascript" src="js/responsive-nav.js"></script>
+            <script type="text/javascript">
+                jQuery(document).ready(function($) {
+                    $(".scroll").click(function(event){
+                        event.preventDefault();
+                        $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+                    });
+                });
+            </script>
+            <!----//End-top-nav-script---->
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+    <!--/start-text-slider-->
+</div>
+
+<div class="my">
+    <div class="container-fluid">
+        <div class="row">
+            <section class="top">
+                <div class="col-md-12">
+                    <div class="col-md-2 col-md-offset-1">
+                        <img src="images/pc-2.jpg">
+                    </div>
+                    <div class="col-md-3">
+                        <h2 style="padding:0 0 0 10px;margin:0 0 40px 0"><a href="">Elsa</a></h2>
+                        <p style="color:#959191">个人签名:</p>
+                        <p style="color:#959191">路漫漫其修远兮,吾将上下而求索</p>
+                    </div>
+                    <div class="col-md-3 col-md-offset-2">
+                        <div class="col-md-6"><span class="glyphicon glyphicon-heart" style="color:#fff;left:23px;">
+                            </span><p><a href="">关注的人</a></p>
+                        </div>
+                        <div class="col-md-6" style="padding-left: 0;"><span class="glyphicon glyphicon-bookmark" style="color:#fff;left:31px;">
+                            </span><p><a href="">标记的课程</a></p>
+                        </div>
+                        <div class="col-md-6"><span class="glyphicon glyphicon-file" style="color:#fff;left:23px;">
+                            </span><p><a href="">浏览记录</a></p>
+                        </div>
+                        <div class="col-md-6" style="padding-left: 0;"><span class="glyphicon glyphicon-yen" style="color:#fff;left:31px;">
+                            </span><p><a href="">购买记录</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="myLeft">
+                <!--左边按钮-->
+                <div class="col-md-2 ann" role="tablist">
+                    <hr style="border-top:2px solid #0facf3;" />
+                    <section class="btnLeft">
+                        <div class="col-md-12  active" href="#grxx" aria-controls="grxx" role="tab" data-toggle="tab">
+                            <a href="">个人信息</a>
+                            <span class="glyphicon glyphicon-chevron-right" style="cursor:pointer;"></span>
+                        </div>
+                        <div class="col-md-12" href="#xxtz" aria-controls="xxtz" role="tab" data-toggle="tab">
+                            <a href="">消息通知</a>
+                            <span></span>
+                        </div>
+                        <div class="col-md-12" href="#wddd" aria-controls="wddd" role="tab" data-toggle="tab">
+                            <a href="">我的订单</a>
+                            <span></span>
+                        </div>
+                        <div class="col-md-12">
+                            <a href="score.html">安全中心</a>
+                            <span></span>
+                        </div>
+                    </section>
+                </div>
+
+                <!--右边加载页面-->
+
+                <div class="tab-content boxRight">
+                    <div class="col-md-10 tab-pane active" role="tabpanel" id="grxx">
+                        <hr style="border-top:2px solid #0facf3;" />
+                        <h3>基本资料</h3>
+                        <hr />
+                        <div class="col-md-12" style="padding-bottom: 10px;margin-bottom: 10px;">
+                            <div style="margin-bottom: 15px;">
+                                <label>姓 名:</label>
+                                <label class="sr-only" for="inputHelpBlock">Input with help text</label>
+                                <input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock" style="display: inline">
+                            </div>
+                            <div class="radio">
+                                <p style="display: inline-block;max-width: 100%;margin-bottom: 5px;font-weight: 700;">性 别:</p>
+                                <label>
+                                    <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">男
+                                </label>
+                                <label>
+                                    <input type="radio" name="blankRadio" id="blankRadio2" value="option1" aria-label="...">女
+                                </label>
+                            </div>
+                            <div>
+                                <div class="form-group" style="margin-bottom: 0;height: 50px;">
+                                    <label>生 日:</label>
+                                    <div class="input-group date form_datetime col-md-3" data-date="1979-09-16T05:25:07Z" data-date-format="dd MM yyyy" data-link-field="dtp_input1" style="position: relative;top: -30px;left: 45px;">
+                                        <input class="form-control" size="16" type="text" value="" readonly>
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                    </div>
+                                    <input type="hidden" id="dtp_input1" value="" /><br/>
+                                </div>
+
+                                <script type="text/javascript">
+                                    $(".form_datetime").datetimepicker({
+                                        format: "dd MM yyyy",
+                                        autoclose: true,
+                                        todayBtn: true,
+                                        startDate: "1980-01-01",
+                                        minuteStep: 10
+                                    });
+                                </script>
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <label>血 型:</label>
+                                <select class="form-control" style="display: inline">
+                                    <option>未知</option>
+                                    <option>A</option>
+                                    <option>B</option>
+                                    <option>O</option>
+                                    <option>AB</option>
+                                    <option>其他</option>
+                                </select>
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <label>出 生 地 址:</label>
+
+                                <select id="province" style="display: inline;width:14%" class="form-control" size=1 onchange="getCity()">
+                                    <option value= 0 >北京</option>
+                                    <option value= 1 >上海</option>
+                                    <option value= 2 >天津</option>
+                                    <option value= 3 >重庆</option>
+                                    <option value= 4 >河北</option>
+                                    <option value= 5 >山西</option>
+                                    <option value= 6 >内蒙古</option>
+                                    <option value= 7 >辽宁</option>
+                                    <option value= 8 >吉林</option>
+                                    <option value= 9 >黑龙江</option>
+                                    <option value= 10 >江苏</option>
+                                    <option value= 11 >浙江</option>
+                                    <option value= 12 >安徽</option>
+                                    <option value= 13 >福建</option>
+                                    <option value= 14 >江西</option>
+                                    <option value= 15 >山东</option>
+                                    <option value= 16 >河南</option>
+                                    <option value= 17 >湖北</option>
+                                    <option value= 18 >湖南</option>
+                                    <option value= 19 >广东</option>
+                                    <option value= 20 >广西</option>
+                                    <option value= 21 >海南</option>
+                                    <option value= 22 >四川</option>
+                                    <option value= 23 >贵州</option>
+                                    <option value= 24 >云南</option>
+                                    <option value= 25 >西藏</option>
+                                    <option value= 26 >陕西</option>
+                                    <option value= 27 >甘肃</option>
+                                    <option value= 28 >宁夏</option>
+                                    <option value= 29 >青海</option>
+                                    <option value= 30 >新疆</option>
+                                    <option value= 31 >香港</option>
+                                    <option value= 32 >澳门</option>
+                                    <option value= 33 >台湾</option>
+                                </select>
+
+                                <select id="city" style="display: inline;width:10.5%" class="form-control">
+                                </select>
+
+                            </div>
+
+                            <div style="margin-bottom: 15px;">
+                                <label>情 感 状 况:</label>
+                                <select class="form-control" style="display: inline">
+                                    <option>未知</option>
+                                    <option>单身</option>
+                                    <option>恋爱</option>
+                                    <option>已婚</option>
+                                    <option>离异</option>
+                                </select>
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <label>教 育 程 度:</label>
+                                <select class="form-control" style="display: inline">
+                                    <option>未知</option>
+                                    <option>小学</option>
+                                    <option>初中</option>
+                                    <option>高中</option>
+                                    <option>大学</option>
+                                    <option>其他</option>
+                                </select>
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">邮 箱 地 址:</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" style="display: inline">
+                                </div>
+                            </div>
+                            <div style="margin-top: 30px;margin-left:50px">
+                                <button type="button" class="btn btn-primary btn-add" style="margin-right:20px;">修改</button>
+                                <button type="button" class="btn btn-primary btn-add" style="margin-left:20px;">保存</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-10 tab-pane boxRight-two" role="tabpanel" id="xxtz">
+                        <hr style="border-top:2px solid #0facf3;" />
+                        <h3>消息通知</h3>
+                        <hr />
+                        <div class="col-md-12" style="background-color: #f5f5f5;border-top-left-radius:4px;border-top-right-radius:4px;">
+                            <div class="col-md-2">
+                                <img src="images/p-3.jpg" style="width:100px;margin:10px 0 10px 0;border-radius:4px;border:1px solid #0facf3;">
+                            </div>
+                            <div class="col-md-7">
+                                <h4>张三</h4>
+                                <div>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <span class="badge">1</span>
+                                            <a href="">东西发过去了</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12" style="background-color: #e9e9e9;">
+                            <div class="col-md-2">
+                                <img src="images/p-4.jpg" style="width:100px;margin:10px 0 10px 0;border-radius:4px;border:1px solid #0facf3;">
+                            </div>
+                            <div class="col-md-7">
+                                <h4>李四</h4>
+                                <div>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <span class="badge">6</span>
+                                            <a href="">收到请回复</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12" style="background-color: #f5f5f5;border-bottom-left-radius:4px;border-bottom-right-radius:4px;">
+                            <div class="col-md-2">
+                                <img src="images/p-8.jpg" style="width:100px;margin:10px 0 10px 0;border-radius:4px;border:1px solid #0facf3;">
+                            </div>
+                            <div class="col-md-7">
+                                <h4>王二</h4>
+                                <div>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <span class="badge">3</span>
+                                            <a href="">你说的东西没找到</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-md-10 tab-pane" role="tabpanel" id="wddd">
+                        <hr style="border-top:2px solid #0facf3;" />
+                        <h3>订单信息</h3>
+                        <hr />
+                        <div class="" id="portfolio">
+                            <div class="container">
+                                <ul id="filters" class="clearfix">
+                                    <li><span class="filter active" data-filter="all wc wzf ysx">全部</span></li>
+                                    <li><span class="filter" data-filter="wc">已完成</span></li>
+                                    <li><span class="filter" data-filter="wzf">未支付</span></li>
+                                    <li><span class="filter" data-filter="ysx">已失效/退订</span></li>
+                                </ul>
+                                <div id="portfoliolist">
+                                    <div class="portfolio wc mix_all" data-cat="wc" style="display: inline-block; opacity: 1;">
+                                        <div class="portfolio-wrapper">
+                                            <a href="#" class="b-link-stripe b-animate-go  thickbox">
+                                                <div class="port-1">
+                                                    <h5>Java 廖雪峰精选课程</h5>
+                                                    <p>包含廖雪峰的部分精选课程</p>
+                                                </div>
+                                                <div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "></h2>
+                                                </div></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="portfolio wc mix_all" data-cat="wc" style="display: inline-block; opacity: 1;">
+                                        <div class="portfolio-wrapper">
+                                            <a href="#" class="b-link-stripe b-animate-go  thickbox">
+                                                <div class="port-1">
+                                                    <h5>尚硅谷课程包</h5>
+                                                    <p>complectitur, hinc utamur ea eam.</p>
+                                                </div>
+                                                <div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "></h2>
+                                                </div></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="portfolio wc mix_all" data-cat="wc" style="display: inline-block; opacity: 1;">
+                                        <div class="portfolio-wrapper">
+                                            <a href="#" class="b-link-stripe b-animate-go  thickbox">
+                                                <div class="port-1">
+                                                    <h5>BENGALI LANGUAGE</h5>
+                                                    <p>tas legere complectitur, hinc utamur ea eam.</p>
+                                                </div>
+                                                <div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "></h2>
+                                                </div></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="portfolio wzf mix_all" data-cat="wzf" style="display: inline-block; opacity: 1;">
+                                        <div class="portfolio-wrapper">
+                                            <a href="#" class="b-link-stripe b-animate-go  thickbox">
+                                                <div class="port-1">
+                                                    <h5>JAPANESE LANGUAGE</h5>
+                                                    <p>tantas legere complectitur, hinc utamur ea eam.</p>
+
+                                                </div>
+                                                <div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "></h2>
+                                                </div></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="portfolio wzf mix_all" data-cat="wzf" style="display: inline-block; opacity: 1;">
+                                        <div class="portfolio-wrapper">
+                                            <a href="#" class="b-link-stripe b-animate-go  thickbox">
+                                                <div class="port-1">
+                                                    <h5>ui课程包</h5>
+                                                    <p>Eum cu tantas legere complectitur, hinc utamur ea eam.</p>
+                                                </div>
+                                                <div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "></h2>
+                                                </div></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="portfolio ysx mix_all" data-cat="ysx" style="display: inline-block; opacity: 1;">
+                                        <div class="portfolio-wrapper">
+                                            <a href="#" class="b-link-stripe b-animate-go  thickbox">
+                                                <div class="port-1">
+                                                    <h5>安卓开发高级课程</h5>
+                                                    <p>ctitur, hinc utamur ea eam.</p>
+                                                </div>
+                                                <div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "></h2>
+                                                </div></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <div class="footer-main">
+            <div class="col-md-12 footer-right">
+                <p>版权所有©爱学网 | 地址：南昌市西湖区安石路69号 | QQ：850959941 | 京ICP备00000001号-1 | 京公网安备 21325451654 号 </p>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

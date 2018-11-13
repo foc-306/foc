@@ -1,0 +1,22 @@
+.sidebar{
+	position: fixed;
+	z-index: 999;
+	top:45%;
+	right: 0px;
+	margin-left:-50px;
+	margin-top:-25px;
+	text-align: left;
+	<!-- background: red; -->
+}
+.sidebar>.list-group-item:first-child {
+	border-radius: 15px 0px 0 0;
+}
+.sidebar>.list-group-item:last-child {
+	border-radius: 0 0 0px 15px;
+}
+.sidebar>a>span.glyphicon {
+	margin-right: 5px;
+}
+.glyphicon-home {
+    position: unset;
+}

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <title>wenticiye</title>
+
+    <style>
+        *{margin:0;padding:0;border-sizing:border-box;}
+
+        a{text-decoration:none;}
+        a:hover{text-decoration:none;}
+        a:focus{text-decoration:none;}/*失去焦点后*/
+        ul{list-style:none;}
+        li a{text-decoration:none;}
+
+        .head-r{width:100%;
+            height:80px;
+            background-color:#0facf3;}
+        .r0{padding:25px 5px;font-size:18px;}
+        .r0 a{color:white;}
+        .r0 a:hover{color:white;}
+        /*第一主框*/
+        .bod-1{width:100%;
+            height:1000px;
+            margin:10px auto auto 0;
+            border:1px solid transparent;}/*上框*/
+        .biao-1{width:900px;
+            height:60px;
+            margin:0 auto;
+            border:1px solid;
+            border-color:transparent transparent gainsboro transparent;}
+
+        .biao-12{width:900px;
+            height:50px;
+            margin:0 auto;
+            background-color:#eceff2;}
+        .for-12{float:right;
+            margin:12px 10px;}
+
+        .biao-22{width:900px;
+            height:800px;
+            margin:0 auto;
+            background-color:white;}
+        /*左边栏*/
+        .bineizuo{width:650px;
+            height:800px;
+            border:1px solid;
+            border-color:gainsboro transparent gainsboro gainsboro;
+            float:left;}
+        .bineizuo li{width:100%;
+            height:auto;
+            border:1px solid;
+            border-color:gainsboro transparent transparent gainsboro;}
+        .bineizuo li:first-child{border-top-color:transparent;}
+        .timu{width:500px;
+            float:left;
+            overflow: hidden;/*没有设定固定宽高无效*/
+            white-space: nowrap;
+            text-overflow:ellipsis;
+        }
+        h4{margin-left:5px;}
+        .tmsjy{width:140px;
+            float:right;
+            text-align:center;
+            margin-top:9px;
+            color:#999;
+        }
+        .xdanei{width:650px;}
+        .nei-zuo{width:500px;
+            margin:1px;
+            float:left;
+            height:20px;
+            overflow:hidden;
+            white-space:nowrap;
+            text-overflow:ellipsis;
+        }
+        .nei-zuo a p{color:#666;
+            margin-left:5px;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+            overflow:hidden;}
+        .ming-you{width:140px;
+            float:right;
+            text-align:center;
+            font-size:14px;
+        }
+        .ming-you a{color:#999;}
+        /*右边栏*/
+        .bineiyou{width:250px;
+            height:885px;
+            border:1px solid;
+            border-color:gainsboro;
+            float:right;
+        }
+        .youkuang-1{width:250px;
+            height:250px;
+            border:1px solid;
+            border-color:transparent transparent gainsboro transparent;
+        }
+        .youne-1{width:120px;
+            margin:20px auto 0 auto;
+            text-align:center;
+
+        }
+        /*左下框*/
+        .bineix_zuo{border:1px solid;
+            border-color:transparent transparent gainsboro gainsboro;
+            float:left;
+            width:650px;
+            height:85px;
+        }
+        .fenye-1{margin:30px auto;
+            text-align:center;
+        }
+        .fenye-1 a,.fenye-1 span{border:1px solid gainsboro;
+            padding:4px 7px;
+            color:#333;
+            cursor:pointer;
+        }
+        .fenye-1 a:hover,.fenye-1 span:hover{color:deepskyblue;
+            border-color:deepskyblue;
+        }
+        /*第二主框*/
+        .bod-2{width:100%;
+            height:350px;
+            margin:0 auto ;
+            border:1px solid transparent;}/*下框*/
+        .ft-1{width:900px;
+            margin:10px auto 2px auto;
+        }
+        .ft-2{width:900px;
+            margin:0 auto;
+        }
+        .ip-21{width:600px;
+            height:40px;
+        }
+        .ft-3{width:900px;
+            margin:10px auto 0 auto;
+        }
+        .ip-22{width:650px;
+            height:150px;
+            resize:none;/*取消文本域拖动*/
+        }
+        .ft-4{width:900px;
+            margin:10px auto;
+        }
+        .bt-21{width:60px;
+            height:35px;
+            background-color:deepskyblue;
+            color:white;
+        }
+        .bt-21:hover{background-color:#2aa8d2;}
+        /*第三主框*/
+        .bod-3{width:100%;
+            height:100px;
+            margin:0 auto ;
+            border:1px solid transparent;}
+        .btt0{width:1000px;
+            height:90px;
+            background-color:#72cdf7;
+            text-align:center;
+            margin:0 auto;
+            overflow:hidden;/*另一个用途防止边距合并*/
+            border-radius:5px 5px 0 0;
+        }
+        /*
+        当两个垂直外边距相遇时，它们将形成一个外边距。
+        合并后的外边距的高度等于两个发生合并的外边距的高度中的较大者。
+        这就很好理解笔者遇到的问题，子元素的margin-top:50px,直接遇到了父元素的margin：0，
+        然后合并到父元素上了。
+        解决方法：
+        修改父元素的高度，增加padding-top样式模拟（padding-top：1px；常用）
+        为父元素添加overflow：hidden；样式即可（完美）
+        为父元素或者子元素声明浮动（float：left；可用）
+        为父元素添加border（border:1px solid transparent可用）
+        为父元素或者子元素声明绝对定位*/
+
+    </style>
+</head>
+<body>
+<div class="head-r">
+    <div class="container-fluid">
+        <div class="row r0">
+            <div class="col-md-1 col-xs-2"><img src="#" alt="error"></div>
+            <div class="col-md-9 col-xs-7"><a href="#">**获取用户名**</a></div>
+            <div class="col-md-2 col-xs-3"><a href="courses0.html">返回</a></div>
+        </div>
+    </div>
+</div>
+<div class="bod-1">
+    <div class="biao-1">
+        <h3 style="color:#7f8082">我的问题</h3>
+    </div>
+    <div class="biao-12">
+        <!--action:向何处提交表单-->
+        <form class="for-12" action="#">
+            <input class="ip-12" value="" placeholder="搜索" type="text">
+            <button class="bt-12" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+        </form>
+    </div>
+    <!--问题和回答内容-->
+    <div class="biao-22 clearfix">
+        <div class="bineizuo">
+            <ul>
+                <li>
+                <div class="xxnei clearfix">
+                    <div class="stimu">
+                        <div class="timu">
+                        <a href="#">
+                        <h4>Python基本语法：循环函数怎么写？</h4>
+                        </a>
+                        </div>
+                        <div class="tmsjy">
+                            <span></span>09:18
+                        </div>
+                    </div>
+                    <div class="xdanei">
+                        <div class="nei-zuo">
+                            <a href="#">
+                            <p>这个怎么写的啊？我也想知道.</p>
+                            </a>
+                        </div>
+                        <div class="ming-you">
+                            <a href="#">
+                            <span class="glyphicon glyphicon-user"></span>
+                                刘华</a>
+                        </div>
+                    </div>
+                </div>
+                </li>
+                <li>
+                    <div class="xxnei clearfix">
+                        <div class="stimu">
+                            <div class="timu">
+                                <a href="#">
+                                    <h4>AJAX怎么请求服务器的数据</h4>
+                                </a>
+                            </div>
+                            <div class="tmsjy">
+                                <span></span>10/09&nbsp05:18
+                            </div>
+                        </div>
+                        <div class="xdanei">
+                            <div class="nei-zuo">
+                                <a href="#">
+                                    <p>同求</p>
+                                </a>
+                            </div>
+                            <div class="ming-you">
+                                <a href="#">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                    一个新人</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="xxnei clearfix">
+                        <div class="stimu">
+                            <div class="timu">
+                                <a href="#">
+                                    <h4>通过AJAX怎么加载txt文件内容到html的指定标签上</h4>
+                                </a>
+                            </div>
+                            <div class="tmsjy">
+                                <span></span>10/01&nbsp08:39
+                            </div>
+                        </div>
+                        <div class="xdanei">
+                            <div class="nei-zuo">
+                                <a href="#">
+                                    <p>不会</p>
+                                </a>
+                            </div>
+                            <div class="ming-you">
+                                <a href="#">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                    红色青蛙</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="xxnei clearfix">
+                        <div class="stimu">
+                            <div class="timu">
+                                <a href="#">
+                                    <h4>为什么在jsp中要用request来获取其它对象呢？</h4>
+                                </a>
+                            </div>
+                            <div class="tmsjy">
+                                <span></span>09/23&nbsp15:08
+                            </div>
+                        </div>
+                        <div class="xdanei">
+                            <div class="nei-zuo">
+                                <a href="#">
+                                    <p>我试了一下都是可以的，应该是为了让我们看的更清楚一点</p>
+                                </a>
+                            </div>
+                            <div class="ming-you">
+                                <a href="#">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                    Hell_01</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="xxnei clearfix">
+                        <div class="stimu">
+                            <div class="timu">
+                                <a href="#">
+                                    <h4>关于session生命周期的问题如题
+                                        我实验多次，发现除了session过期之外，session关闭服务器并没有销毁，此对象可能一直存在，
+                                        而重启服务器并重新打开浏览器这个时候才调用了销毁方法并同时创建新的session</h4>
+                                </a>
+                            </div>
+                            <div class="tmsjy">
+                                <span></span>09/20&nbsp17:29
+                            </div>
+                        </div>
+                        <div class="xdanei">
+                            <div class="nei-zuo">
+                                <a href="#">
+                                    <p>我的也是，怎么重启服务器都不输出创建和销毁的信息</p>
+                                </a>
+                            </div>
+                            <div class="ming-you">
+                                <a href="#">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                    Hell_01</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="xxnei clearfix">
+                        <div class="stimu">
+                            <div class="timu">
+                                <a href="#">
+                                    <h4>求问关于jquery和DOM转化中什么时候用引号的问题</h4>
+                                </a>
+                            </div>
+                            <div class="tmsjy">
+                                <span></span>09/19&nbsp15:23
+                            </div>
+                        </div>
+                        <div class="xdanei">
+                            <div class="nei-zuo">
+                                <a href="#">
+                                    <p>不加引号的时候，里面是一个已经通过getElement()方法获得的dom对象，
+                                        是把这个dom对象转换成jquery对象；加了引号的时候，里面是一个标签元素，是把这一类标签的集合转换成jquery对象。</p>
+                                </a>
+                            </div>
+                            <div class="ming-you">
+                                <a href="#">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                    kiddyw7</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="xxnei clearfix">
+                        <div class="stimu">
+                            <div class="timu">
+                                <a href="#">
+                                    <h4>怎么设置第二第三等等的颜色呢？？</h4>
+                                </a>
+                            </div>
+                            <div class="tmsjy">
+                                <span></span>09/12&nbsp09:18
+                            </div>
+                        </div>
+                        <div class="xdanei">
+                            <div class="nei-zuo">
+                                <a href="#">
+                                    <p>$div.eq(1).css('color','red')这是设置第二个的，eq默认是从0开始，所以eq（1）代表第二个，依此类推</p>
+                                </a>
+                            </div>
+                            <div class="ming-you">
+                                <a href="#">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                    qq_1012</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+        <div class="bineiyou">
+            <div class="youkuang-1">
+            <div class="youne-1">
+                <!--列表组-->
+                <div class="list-group">
+                    <a class="list-group-item" disabled style="background-color:#e0dada;">最近访问</a>
+                    <a class="list-group-item" href="javascript:;">C#</a>
+                    <a class="list-group-item" href="javascript:;">Java</a>
+                    <a class="list-group-item" href="javascript:;">Python</a>
+                </div>
+            </div>
+            </div>
+
+        </div>
+        <div class="bineix_zuo">
+            <div class="fenye-1">
+                <span><i class="glyphicon glyphicon-arrow-left"></i>&nbsp上一页</span>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <span>下一页&nbsp<i class="glyphicon glyphicon-arrow-right"></i></span>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--发问板块-->
+<div class="bod-2">
+    <div class="ft-1">
+        <span class="glyphicon glyphicon-pencil" style="float:left;">&nbsp</span>
+        <p>提问</p>
+    </div>
+    <div class="ft-2">
+        <input class="ip-21" value="" placeholder="提问标题" type="text" autocomlete="off">
+        <!--<span class="glyphicon glyphicon-new-window"></span>autocomlete:是否让浏览器记住之前的值-->
+    </div>
+    <div class="ft-3">
+        <textarea class="ip-22" name="text" placeholder="提问内容"></textarea>
+    </div>
+    <div class="ft-4">
+        <div class="anniu-f">
+            <button class="bt-21" value="发表" onclick="">提交</button>
+        </div>
+    </div>
+</div>
+<div class="bod-3">
+    <div class="btt0">
+        <p style="margin:40px auto 0 auto;"><a href="#" style="color:white;">@请遵守第三组发表规则</a>
+            &nbsp<a href="#" style="color:white;">访问手机版</a>
+        </p>
+    </div>
+</div>
+</body>
+</html>

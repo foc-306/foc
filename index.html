@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>爱学</title>
+<meta name="viewport" charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="keywords" content="Bootstrap Responsive Templates, Iphone Compatible Templates, Smartphone Compatible Templates, Ipad Compatible Templates, Flat Responsive Templates"/>
+<link rel="icon" href="images/logo0002.png" type="image/x-icon"/>
+<link href="css/bootstrap/bootstrap.min.css" rel='stylesheet' type='text/css'>
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/sidebar.css" rel='stylesheet' type='text/css' />
+	<link href="//at.alicdn.com/t/font_915347_1pv87xtj0rz.css" rel='stylesheet' type='text/css' />
+	<link href="css/yuan.css" rel="stylesheet" type="text/css" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+<!---- start-smoth-scrolling---->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+
+<!---- start-smoth-scrolling---->
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="js/jquery.contentcarousel.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+	<style type="text/css">
+
+
+		.header div ul {
+			background: #333;
+		}
+		.menu li a:hover, .menu li.active a {
+			color: #0facf3;
+		}
+		.welcome,.news,.staff,.knee,.leg{
+			border: 1px solid #DAE0E4;
+			box-shadow: 0 1px 2px 0 rgba(158,172,182,.2);margin-top:15px;background-color:#fff;
+		}
+
+/*导航栏css 开始*/
+		.nav > li > a{
+			color:#fff;
+		}
+		.nav li:hover, .nav li.active {
+			border-top: 0 solid #000;
+		}
+		.news-right h4 a{
+			color:#000;
+		}
+/*导航栏css 开始*/
+
+/*登录按钮css 开始*/
+        .btn-primary1:hover {
+            color: #0facf3;
+            background-color: #fff;
+            border-color: #fff;
+            transition: all 0.3s;
+        }
+        .btn-primary1:active, .open > .dropdown-toggle.btn-primary1 {
+            color: #0facf3;
+            background-color: #fff;
+            border-color: #fff;
+        }
+        .btn-primary1:focus {
+            color: #0facf3;
+            background-color: #fff;
+            border-color: #fff;
+        }
+        .btn-add{
+            width:95px;
+            height:35px;
+            border-radius:25px;
+            border:2px solid #0facf3;
+            color:#fff;
+            background-color: rgba(0 , 0, 0 , 0)
+        }
+/*登录按钮css 结束*/
+
+
+/*岗位介绍css代码 开始*/
+		.knee-text h2{
+			font-size: 2em;
+			color: #1793d1;
+			font-weight: 600;
+			margin: 10px 0;
+		}
+		.knee-text i{
+			color:#0facf3;
+			font-size:27px;
+		}
+		.knee-text h3{
+			font-size: 18px;
+			color:#6c757d;
+			margin: 10px 0;
+		}
+		.knee-text a{
+			color:#6c757d;
+			font-size:33px;
+			text-decoration:none;
+		}
+		.knee-text p{
+			color:#adb5bd;
+			font-size:15px;
+			line-height: 1.6em;
+		}
+		.tabs{
+			text-align:center;
+			margin-top:10px;
+			margin-bottom:35px;
+		}
+		.btn-add3{
+			color:#fff;
+			border-radius:4px;
+			width:170px;
+			height:50px;
+			margin-top:15px;
+			background-color:#0facf3;
+		}
+		/*热门岗位下面切换按钮*/
+
+		.dot i{
+			color:#37dbf5;
+			font-size:60px;
+		}
+/*岗位介绍css代码 结束*/
+
+
+		.leg-text h3{
+			font-size: 2em;
+			color: #1793d1;
+			font-weight: 600;
+			margin: 10px 0;
+		}
+
+
+		a.tooltips span::after{
+			border-top:30px solid #fff;
+		}
+
+/*我们的板块css 开始*/
+		.time span{
+			font-size:50px;
+			color:#0facf3;
+		}
+		.time p{
+			text-align: center;
+			margin-top:10px;
+			color:#959191;
+			font-size:15px;
+		}
+		.time h4{
+			text-align:center;
+			margin-top:6px;
+		}
+		.time > div > div{
+			margin-top:20px;
+		}
+		.time > div > div > div{
+			position:relative;
+			left:118px;
+			width: 100px;
+			height: 100px;
+			border: 1px solid #0facf3;
+			border-radius: 200px;
+			font-size: 50px;
+			line-height: 100px;
+			text-align: center;
+			color: #37dbf5;
+		}
+		.time > div > div > div:hover{
+			box-shadow:0 0 5px #37dbf5;
+		}
+/*我们的板块css 结束*/
+
+/*加入我们按钮css代码 开始*/
+		.btn-primary2:hover {
+			color: #0facf3;
+			background-color: #fff;
+			border-color: #0facf3;
+			transition: all 0.3s;
+		}
+		.btn-primary2:active, .open > .dropdown-toggle.btn-primary2 {
+			color: #0facf3;
+			background-color: #fff;
+			border-color: #0facf3;
+		}
+		.btn-primary2:focus {
+			color: #0facf3;
+			background-color: #fff;
+			border-color: #0facf3;
+		}
+		.btn-add2{
+			color:#fff;
+			border-radius:4px;
+			width:170px;
+			height:50px;
+			margin-top:15px;
+			background-color:#0facf3;
+		}
+/*加入我们按钮css代码 结束*/
+
+		.cen{
+			text-align:center;
+		}
+		.cen h2{
+			color:#fff;
+			font-size:45px;
+			letter-spacing: .4em;
+		}
+
+
+	</style>
+	<script>
+		$(document).ready(function(){
+		    $(".btn-primary1").click(function(){
+                window.open("denglu.html");
+			});
+		    $(".btn-add2").click(function(){
+		        window.open("关于我们/人才招聘.html")
+			});
+            $(".btn-add3").click(function(){
+                window.open("about.html")
+            });
+		});
+	</script>
+</head>
+<body style="background-color:#f5f6f7">
+
+
+	<div class="list-group sidebar">
+	  <a href="index.html" class="list-group-item"> 
+		<span class="glyphicon glyphicon-education"></span>主页
+	  </a>
+		<a href="My.html" class="list-group-item">
+			<span class="glyphicon glyphicon-user"></span>我的
+		</a>
+	  <a href="topic.html" class="list-group-item">
+		<span class="glyphicon glyphicon-align-left"></span>话题
+	  </a>
+	</div>
+	<!--侧边栏-->
+	<div class="banner" id="home" style="background-image: url(https://vipp.com/sites/default/files/vipp-522-wall-lamp-front-1_2.jpg);">
+
+			<div class="header">
+				<div class="menu">
+					<a class="toggleMenu" href="#" style="color:#0facf3;"><span class="glyphicon glyphicon-menu-hamburger" style="font-size:30px;"></span> </a>
+					<ul class="nav" id="nav">
+					<li class="active"><a href="index.html" class="active">主页</a></li>
+					<li><a href="about.html">免费课程</a></li>
+					<li><a href="live.html">课程直播</a></li>
+					<li><a href="forum.html">论坛</a></li>
+					<li><a href="courses0.html">学习天地</a></li>
+					<li><a href="关于我们/关于我们.html">关于我们</a></li>
+					<li style="border:2px solid #0facf3;height:22px;"></li>
+					<li><button type="button" class="btn btn-primary1 btn-add">登录/注册</button></li>
+					</ul>
+                                  <!----start-top-nav-script---->
+					<script type="text/javascript" src="js/responsive-nav.js"></script>
+					<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$(".scroll").click(function(event){		
+							event.preventDefault();
+							$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+						});
+					});
+					</script>
+		<!----//End-top-nav-script---->
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<!--/start-text-slider-->
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 cen">
+						<div>
+							<h2>爱学网</h2>
+							<p>在这里您</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+	</div>
+	<!--start-welcome-->
+	<div class="welcome">
+		<div class="container">
+			<div class="welcome-main">
+				<div class="col-md-6 welcome-left">
+					<h1>欢迎!</h1>
+					<p>学习是一辈子的事情，我们随时，但是，在学习的过程中不是所有的时候都有教师指导，
+						需要自学，自学需要大量的资源。在互联网信息时代，学习资源非常丰富，
+						网络上有大量的学习网站，一般分为：免费学习网站和收费学习网站，
+						但是这些网站都有一个限制，学者只能被动的按部就班学习，无法去询问，
+						我们这个网站有名师在线指导，可以随时随刻的给予用户相关问题的指导。</p>
+					<div class="tool">
+						<a class="tooltips" href="关于我们/关于我们.html">
+							<span>关于我们</span></a>
+					</div>
+				</div>
+				<div class="col-md-6 welcome-right">
+					<div id="carousel-example-generic" class="carousel carousel-add slide" data-ride="carousel">
+
+						<ol class="carousel-indicators">
+							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						</ol>
+
+
+						<div class="carousel-inner" role="listbox">
+						<div class="item active">
+							<img src="images/冰川.jpg" alt="第一张图片">
+							<div class="carousel-caption">
+								第一张图片
+							</div>
+						</div>
+						<div class="item">
+							<img src="images/灯.jpg" alt="第一张图片">
+							<div class="carousel-caption">
+								第二张图片
+							</div>
+						</div>
+						<div class="item">
+							<img src="images/麒麟.jpg" alt="第一张图片">
+							<div class="carousel-caption">
+								第三张图片
+							</div>
+						</div>
+					</div>
+
+
+						<a class="left carousel-control carousel-control-one" href="#carousel-example-generic" role="button" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control carousel-control-one" href="#carousel-example-generic" role="button" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div><div class="tlinks"></div>
+	<!--end-welcome-->
+	<!--start-news-->
+	<div class="news">
+		<div class="container">
+			<div class="news-main">
+				<h3>最新资讯</h3>
+				<hr style="border-top:2px solid #0facf3;" />
+				<div class="news-text">
+					<div class="col-md-4 news-text-left">
+						<div class="news-left">
+							<h5>19</h5>
+							<p>Oct</p>
+						</div>
+						<div class="news-right">
+							<h4><a href="https://baijiahao.baidu.com/s?id=1614737662212898643&wfr=spider&for=pc" target="_blank">世界VR产品大会在南昌召开</a></h4>
+							<p>19日，2018世界VR产业大会在江西南昌开幕，此次大会共邀请国内外VR/AR领域专家学者、企业家等代表2000余人。 </p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="col-md-4 news-text-left">
+						<div class="news-left">
+							<h5>17</h5>
+							<p>Dec</p>
+						</div>
+						<div class="news-right">
+							<h4><a href="http://tech.southcn.com/t/2018-10/23/content_183766051.htm"  target="_blank">智造升级:佛山再迎“互联网+”盛会</a></h4>
+							<p>本届中国（广东）国际“互联网+”博览会,以“数字浪潮、智创互联”为主题，引入全新的“数字经济”和“数字技术”两大展览主题，预计将吸引近700家海内外知名企业前来参与。 </p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="col-md-4 news-text-left">
+						<div class="news-left">
+							<h5>13</h5>
+							<p>Dec</p>
+						</div>
+						<div class="news-right">
+							<h4><a href="http://fund.jrj.com.cn/2018/10/22065525235163.shtml" target="_blank">华安媒体互联网混合基金最新净值涨幅达5.47% </a></h4>
+							<p>　金融界基金10月22日讯 华安媒体互联网混合型证券投资基金,10月19日净值上涨5.47%，引起投资者关注。当前基金单位净值为0.9640元，累计净值为0.9640元。</p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="news-text">
+					<div class="col-md-4 news-text-left">
+						<div class="news-left">
+							<h5>04</h5>
+							<p>Dec</p>
+						</div>
+						<div class="news-right">
+							<h4><a href="https://baijiahao.baidu.com/s?id=1614445204433832902&wfr=spider&for=pc" target="_blank">探索“互联网+脱贫”新路径</a></h4>
+							<p>Aenean ac urna ut neque semper maximus at et ligula. Aliquamex risus, pretiu sed pharetra efficitur sit amet ligula. </p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="col-md-4 news-text-left">
+						<div class="news-left">
+							<h5>15</h5>
+							<p>Sep</p>
+						</div>
+						<div class="news-right">
+							<h4><a href="https://www.jianshu.com/p/a950a8833ba2" target="_blank">为什么Python在中国突然就火了</a></h4>
+							<p>为什么Python突然就火了起来了呢？我来简要分析一下，主要有以下三点：人工智能与机器学习的兴起,教育与考试的推动,外挂的好奇心 </p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="col-md-4 news-text-left">
+						<div class="news-left">
+							<h5>20</h5>
+							<p>Dec</p>
+						</div>
+						<div class="news-right">
+							<h4><a href="https://baijiahao.baidu.com/s?id=1591340505943064983&wfr=spider&for=pc" target="_blank">为什么大部分程序员看不起PHP这门语言?</a></h4>
+							<p>世界上最好的语言为什么被那么多人所诟病呢？ </p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--end-news-->
+	<!--start-staff-->
+	<div class="staff">
+		<div class="container">
+			<div class="staff-text">
+				<h3>名师展示</h3>
+				<hr style="border-top:2px solid #0facf3;" />
+				<div class="staff-main">
+					<div class="col-md-5 staff-main-left">
+						<h5>这些是我们平台最优质的讲师</h5>
+						<P>来吧！让我们来认识认识他们</P>
+						<h4>讲师详情</h4>
+						<h5 class="s1">李木</h5>
+						<p>曾任职某上市公司技术总监，负责多个大型企业级项目的构建，也设计过多种类型的互联网项目。 </p>
+						<h5 class="s1">王二</h5>
+						<p>7年工作经验的资深前端工程师，主要从事Web视频领域的底层开发。 </p>
+						<div class="tool">
+						<a class="tooltips" href="关于我们/讲师资料.html">
+							<span>更多名师</span>
+						</a>
+						</div>
+					</div>
+					<div class="col-md-7 events-col">
+				<div id="ca-container" class="ca-container">
+				    <div class="ca-wrapper" style="overflow: hidden;">
+				         
+						<div class="ca-item ca-item-2" style="position: absolute; left: 0px;">
+							<div class="ca-item-main">
+								<div class="ca-icon">
+									<div class="caption">
+										<p>Marry &amp; jain<br>professor</p>
+									</div>  
+								</div>
+								<div class="ca-icon2">
+									<div class="caption">
+										<p>Marry &amp; jain<br>professor</p>
+									</div> 
+								 </div>
+							</div>
+						</div>
+						<div class="ca-item ca-item-3" style="position: absolute; left: 225px;">
+							<div class="ca-item-main">
+								<div class="ca-icon">
+									<div class="caption">
+										<p>Marry &amp; jain<br>professor</p>
+									</div> 
+								 </div>
+								<div class="ca-icon3">
+									<div class="caption">
+										<p>Marry &amp; jain<br>professor</p>
+									</div> 
+								 </div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+		</div>
+   					<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!--end-staff-->
+	<!--start-knee-->
+	<div class="knee">
+		<div class="container">
+			<div class="knee-text">
+				<h2>热门岗位</h2>
+				<hr style="border-top:2px solid #0facf3;" />
+				<div style="text-align:center;"><a href="#">Java工程师</a></div>
+				<div style="text-align:center;width: 80px;margin: 0 auto;border-bottom: 5px solid #37dbf5;"></div>
+				<div class="col-md-12" style="text-align:center;">
+					<div class="col-md-4">
+						<div class="col-md-12" style="background-color:#fff;height: 200px;">
+							<i class="iconfont icon-jiuyeshuai"></i>
+							<h3>就业率</h3>
+							<p>2018年国内就业率高的7大编程语言排行中，Java居榜首，尽管与2017年相比，Java在2018年的受欢迎程度将会有所下降，但仍然占据着绝对的优势。</p>
+						</div>
+						<div class="col-md-12" style="background-color:#fff;margin-top:15px;">
+							<i class="iconfont icon-fazhanqianjing"></i>
+							<h3>发展前景</h3>
+							<p>JAVA人才社会需求量大，根据IDC的统计数字，在所有软件开发类人才的需求中，对JAVA工程师的需求达倒全部需求量的60%~70%。</p>
+						</div>
+						<div class="col-md-12" style="background-color:#fff;margin-top:15px;">
+							<i class="iconfont icon-jiuyegongzuo"></i>
+							<h3>就业方向</h3>
+							<p>可以从事JSP网站开发、Java编程、Java游戏开发、Java桌面程序设计，以及其他与Java语言编程相关的工作。</p>
+						</div>
+					</div>
+
+					<div class="col-md-4" style="top: 110px;left:20px;">
+						<div class="dot">
+							<i class="iconfont icon-java"></i>
+						</div>
+						<div class="pulse"></div>
+						<div class="pulse1"></div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="col-md-12" style="background-color:#fff;height: 200px;">
+							<i class="iconfont icon-tedian"></i>
+							<h3>特点</h3>
+							<p>Java是一门面向对象编程语言，不仅吸收了C++语言的各种优点，还摒弃了C++里难以理解的多继承、指针等概念，因此Java语言具有功能强大和简单易用两个特征。</p>
+						</div>
+						<div class="col-md-12" style="background-color:#fff;margin-top:15px;">
+							<i class="iconfont icon-lishi"></i>
+							<h3>发展历史</h3>
+							<p>1991年，Sun公司的Green项目，Oak<br />
+								1995年，推出Java测试版<br />
+								1996年，JDK1.0<br />
+								1997年，JDK1.1<br />
+								1998年，JDK1.2，大大改进了早期版本的缺陷，是一个革命性的版本，更名为Java2。<br />
+								2004年，J2SE 5.0 (1.5.0)  Tiger老虎<br />
+								2006年，J2SE 6.0 (1.6.0)  Mustang野马<br />
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12 tabs">
+					<button type="button" class="btn btn-primary2 btn-add btn-add3">了解更多</button>
+				</div>
+
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!--end-knee-->
+	<!--start-leg-->
+	<div class="leg" style="margin-bottom:15px;">
+		<div class="container" style="margin-bottom: 35px;">
+			<div class="leg-text">
+				<h3>我们的</h3>
+				<hr style="border-top:2px solid #0facf3;" />
+				<section class="time">
+					<div class="col-md-12">
+						<div class="col-md-4">
+							<div>
+								<span class="glyphicon glyphicon-comment"></span>
+							</div>
+							<p>我们平台的交流量</p>
+							<h4>1,000</h4>
+						</div>
+						<div class="col-md-4">
+							<div>
+								<span class="glyphicon glyphicon-book"></span>
+							</div>
+							<p>我们的课程数量</p>
+							<h4>1,000</h4>
+						</div>
+						<div class="col-md-4">
+							<div>
+								<span class="glyphicon glyphicon-user"></span>
+							</div>
+							<p>我们的用户量</p>
+							<h4>1,000</h4>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="col-md-4">
+							<div>
+								<span class="glyphicon glyphicon-dashboard"></span>
+							</div>
+							<p>我们运营的时长</p>
+							<h4>1,000</h4>
+						</div>
+						<div class="col-md-4">
+							<div>
+								<span class="glyphicon glyphicon-tree-conifer"></span>
+							</div>
+							<p>我们的贡献</p>
+							<h4>在沙漠中我们有1,000棵树</h4>
+						</div>
+						<div class="col-md-4">
+							<div>
+								<span class="glyphicon glyphicon-map-marker"></span>
+							</div>
+							<p>我们的地址</p>
+							<h4>南昌西湖区安石路69号</h4>
+						</div>
+					</div>
+					<div class="col-md-12" style="text-align: center;">
+						<button type="button" class="btn btn-primary2 btn-add btn-add2">加入我们</button>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+	<!--end-leg-->
+	<!--start-footer-->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-main">
+				<div class="col-md-12 footer-right">
+					<p>版权所有©爱学网 | 地址：南昌市西湖区安石路69号 | QQ：850959941 | 京ICP备00000001号-1 | 京公网安备 21325451654 号 </p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+					<a href="#home" id="toTop" class="scroll"  title="返回顶部">
+						<span id="toTopHover"></span>
+					</a>
+	</div>
+	<!--end-footer-->
+
+</body>
+</html>

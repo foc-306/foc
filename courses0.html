@@ -1,0 +1,617 @@
+﻿<!DOCTYPE html>
+<html lang="zn-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"  content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="css/liMarquee.css">
+    <link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.liMarquee.js"></script>
+
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>学习中心</title>
+    <style>
+        *, *:after, *:before {
+            box-sizing: border-box;
+        }
+        .header{border-top:9px solid #333;
+		       
+		}
+        .nav-0 a{color:white;}
+        a:hover{text-decoration:none;}
+        a:focus{text-decoration:none;}
+        .nav-0 a:hover{text-decoration:none;color:#0facf3;}
+        .nav-0 li{margin:15px 25px;
+                   display:inline-block;
+                   border:2px solid;
+                   border-radius:0 0 5px 5px;
+                   border-color:#333 transparent white transparent;}
+        .nav-1{display:inline-block;}
+        .nav-1 li:hover{border-color:#333 transparent #0facf3 transparent;}
+        .menu{text-align:center;
+               background-color:#333;
+               height:70px;
+			  
+          }
+        .menu li{display:inline-block;
+            font-size:1.5em;
+        }
+        .h13{color:#1793d1;
+            font-size:2.5em;
+            text-align:center;
+            margin:40px auto 30px auto;
+        }
+        #filters{text-align:center;
+            margin:2em 0 3em 0;
+            list-style:none;
+        }
+
+        #filters li{display:inline-block;
+            margin:0 10px;
+            border:1.5px solid #333;
+            padding:5px 20px;
+            align:center;
+            cursor:pointer; /*鼠标停留时显示效果：手*/
+			border-radius:5px;
+           }
+        .filter{text-align:center;}
+        .toggleMenu{display:none;}
+
+        .ci{margin:130px auto 20px auto;}
+        .ig-0{margin:3px auto 10px auto;}
+        .ci p{font-size:18px;
+              line-height:1.5em;
+              color:#777474;
+            cursor:pointer;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            display:-webkit-box;
+            -webkit-box-orient:vertical;
+            -webkit-line-clamp:5;
+             }
+        .col-xs-12{
+            color:#333;
+            text-align:center;
+            font-size:20px;
+        }
+
+        .tb1{
+            height:auto;
+            width:1110px;
+            margin:80px auto;
+        }
+        .table{margin-top:20px;}
+        .table th{font-size:1.2em;}
+        .table tr {border: 1px solid #333;}
+        table th,.table td{text-align:center;}
+        .t0{cursor:pointer;}
+        .table00{margin:20px auto;
+                 padding:5px;
+                 background-color:white;
+        }
+
+        .cs-1{display:none;}
+        .table1{margin:10px auto;width:100%;}
+        .table1 th{font-size:1.2em;padding:5px;}
+        .table1 tr{border:2px solid ;
+                    border-color: dodgerblue transparent;
+         }
+        .table1 tbody tr:hover{box-shadow:0 1px 1px 1px #86BFF2;}
+        .table1 tbody td{cursor:pointer;}
+        .table1 td{padding:10px;}
+        .td-21{overflow:hidden;
+                max-width:160px;
+                white-space: nowrap;/*不进行换行*/
+                text-overflow: ellipsis;/*文本溢出：省略号*/
+
+        }
+        .td-22{text-align:center;}
+        .bg-0{width:100%;
+            height:40px;
+            padding:8px 10px;
+            margin:5px auto;
+        }
+        .bg-00{border-radius:4px;
+            border:1px solid #0facf3;
+            padding:1px 4px;
+            width:60px;
+            height:auto;
+            text-align: center;
+            float:right;
+        }
+        .bg-00:hover{cursor:pointer;
+            background-color:#E8E8E8;
+        }
+        .bg-00 a{color:#86BFF2;}
+        .bg-00 a:hover{color:#0facf3;}
+        .fen-0{width:100%;
+                text-align:center;
+                margin-top:100px;
+                background-color:lavender;
+                border-radius:4px;
+        }
+        .fen-0 a{color:royalblue;margin:0 5px;}
+        .fen-0 a:hover{color:#d22737;}
+
+
+        .cs-2{display:none;}
+        .table2{width:100%;}
+        .table2 th{font-size:1.2em;padding:11px;}
+        .table2 td{padding:10px;}
+        .table2 tbody td{cursor:pointer;}
+        .table2 tr{
+                    border:1px solid royalblue;
+        }
+        .table2 tbody tr:hover{box-shadow:0px 1px 1px 1px #86BFF2;}
+        .td-32{text-align:center;}
+        .bg-1{width:100%;
+              height:40px;
+              padding:8px 10px;
+              margin:5px auto;
+        }
+        .bg-10{border-radius:4px;
+                border:1px solid #0facf3;
+                padding:1px 4px;
+                width:60px;
+                height:auto;
+                text-align: center;
+                float:right;
+        }
+        .bg-10:hover{cursor:pointer;
+                      background-color:#E8E8E8;
+                     }
+        .bg-10 a{color:#86BFF2;}
+        .bg-10 a:hover{color:#0facf3;}
+
+        .fen-1{width:100%;
+            text-align:center;
+            margin-top:100px;
+            background-color:lavender;
+            border-radius:4px;
+        }
+        .fen-1 a{color:royalblue;margin:0 5px;}
+        .fen-1 a:hover{color:#d22737;}
+
+        .cs-3{display:none;}
+
+        .gun-0{width:auto;margin:90px auto 0 auto; }
+        .gun-0 a{color:#333;margin:0 20px;}
+        .gun-0 a:hover{text-decoration:none;}
+
+        .botton-0{margin:1px auto auto auto;}
+
+        .p1{
+            position:fixed;
+            right:0;
+            width:90px;
+            height:30px;
+            top:100px;
+            border-radius:10px 0 0 10px;
+            background-color:lightsteelblue;
+            text-align:center;
+            padding:6px 0 4px 0;
+        }
+        .p1 a{color:white;}
+        .p1 a:hover{color:#0facf3;}
+
+
+    </style>
+
+    <style>
+        @media screen and (max-width:1200px) {
+            .tb1{width:930px;height:auto;}
+        }
+        @media screen and (max-width:1150px) {
+            .zui-x0{visibility:hidden;}
+        }
+        @media screen and (max-width:992px) {
+            .menu{height:39px;}
+            .nav-0 li{display:none;}
+            .toggleMenu{display:inline-block;}
+            .y1{margin:0 auto;}
+            .toggleMenu img{width:100%;}
+
+        }
+
+        @media screen and (max-width:990px){
+            .tb1{width:690px;height:auto;}
+        }
+        @media screen and (max-width:772px){
+            .tb1{width:510px;height:auto;}
+        @media screen and (max-width:768px){
+            #filters li{
+                padding:2px 10px;
+                margin:0 6px;
+            }
+            .zui-x1{text-align:center;}
+        }
+        /*480px*/
+        @media screen and (max-width: 640px){
+            #filters{
+                margin:2em 0 8px 0;
+            }
+            #filters li{
+                border:2px solid #333;
+            }
+            .table{border:0;}
+            .table thead{display:none;}
+            .table tr {
+                margin:10px 0 0 15px;
+                display: block;
+                border-bottom: 2px solid #333;
+                width:450px;
+            }
+            .table td {
+                display: block;
+                text-align:right;
+                font-size: 13px;
+                border-bottom: 1px dotted #333;
+            }
+            .table td:first-child{
+                border-top:none;
+            }
+            .table td:last-child {
+                border-bottom: 0;
+            }
+            .table td:before {
+                content: attr(data-label);
+                float: left;
+                text-transform: uppercase;/*定义仅有的大写字母*/
+                font-weight: bold;
+            }
+            .botton-0{margin:1px auto auto auto;}
+
+        }
+        @media screen and (max-width: 476px){
+            #filters li{
+                padding:0 5px;
+                margin:0 5px;
+            }
+            .p1{display:none;}
+        }
+        @media screen and (max-width: 376px){
+            #filters{
+                margin:15px 0 8px 0;
+            }
+            #filters li{
+                padding:0 auto;
+                margin:0 auto;
+            }
+            #filters{padding:0 20px;}
+            .h13{margin:30px auto 30px auto;}
+        }
+    </style>
+    <script>
+        /*
+        $(function(){
+   $(window).scroll(function(){
+      // 当滚动到最底部以上100像素时， 加载新内容
+      if ($(document).height() - $(this).scrollTop() - $(this).height()<10){
+         loadMore();}
+   });
+});
+           ------------------
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+         --------------
+        $(function(){
+            $("#nav li").click(function() {
+                $(this).siblings('li').removeAttr('color','#065e86');  // 删除其他兄弟元素的样式
+               // $(this).siblings('li').css("background","#E8E8E8");
+                //$(this).addClass('zuo');                            // 添加当前元素的样式
+                $(this).attr("color","#065e86");      a:active{}:选中元素改变样式（按住不放就会变）
+            });                                       location.reload();重新加载当前页面
+        });*/
+        $(function() {
+            $("#filters li").click(function () {
+                $(this).css({"background-color": "#40e1f1", "border": "none"});
+                $(this).siblings('li').css({"background-color": "white", "border": "1.5px solid #333"});
+            });
+            $(".ftr1").click(function () {
+                // $(".tb1").load("courses0.html .table")//重新加载tb1
+                $(" .tb1").load("courses0.html .cs-0");
+                //$(".tb1").html("");
+            });
+            $(".ftr2").click(function () {
+               //$(" .tb1").load("tx.html");
+                $(".tb1").load("courses0.html .cs-1",function () {
+                    $(".cs-1").css("display","block");
+                    $(".ci").css("display","none");
+                });
+           });
+            $(".ftr3").click(function () {
+                $(".tb1").load("courses0.html .cs-2",function () {
+                    $(".cs-2").css("display","block");
+                    $(".ci").css("display","none");
+                });
+            });
+            $(".ftr4").click(function () {
+                $(".tb1").load("courses0.html .cs-3",function () {
+                    $(".cs-3").css("display","block");
+                    $(".ci").css("display","none");
+                });
+            });
+			$(".ftr5").click(function(){
+			    window.open("forum.html");
+			});
+        });
+        $(function(){
+            $(".gun-0").liMarquee({hoverstop:false});
+        });//hoverstop:false一般滚动
+        /*$(document).ready(function(){
+            $(".table2 tr").bind("click",function(){
+                window.open("forum.html");
+            });
+        });给tr添加点击事件无效*/
+    </script>
+</head>
+<body>
+<div class="banner" id="home1">
+<div class="container0" style="width:100%;">
+    <div class="header">
+        <div class="menu"><!--带有两个菜单按钮的工具栏-->
+          <a class="toggleMenu y1" href="#" >
+              <img src="images/menu-icon.png" alt="未加载">
+          </a>
+            <ul class="nav-0 nav-1" ><!--定义导航链接的部分-->
+                <li style="height:57px;width:66px;"><a href="index.html">主页</a></li>
+                <li style="height:57px;width:66px;"><a href="about.html">课程</a></li>
+                <li style="height:57px;width:108px;"><a href="live.html">三四五六</a></li>
+                <li style="height:57px;width:108px;"><a href="forum.html">论坛</a></li>
+                <li style="height:57px;width:108px;border-bottom-color:#0facf3;"><a href="courses0.html" style="color:#0facf3;">学习天地</a></li>
+                <li style="height:57px;width:108px;"><a href="关于我们/关于我们.html">关于我们</a></li>
+            </ul>
+            <!--<script type="text/javasrcipt" src="a1\web\responsive-nav.js"></script>
+            <script>
+            </script>event:事件项目结果-->
+        </div>
+        <div class="clearfix"></div>
+        <!--clearfix:清除左右两边浮动-->
+    </div>
+</div>
+    <div class="portfolios" id="portfolio"><!--文件夹-->
+<div class="container">
+    <h3 class="top-head h13">学习课堂</h3>
+    <ul id="filters" class="clearfix filters">
+        <li class="ftr1">
+            <span class="filter ft1" data-filter="kecheng "><i class="glyphicon glyphicon-tasks"></i>&nbsp课程</span>
+            <!--data-filter:数据筛选器-->
+        </li>
+        <li class="ftr2">
+            <span class="filter ft2" data-filter="biji"><i class="glyphicon glyphicon-eye-open"></i>&nbsp问题</span>
+        </li>
+        <li class="ftr3">
+            <span class="filter ft3" data-filter="wenti"><i class="glyphicon glyphicon-pencil"></i>&nbsp笔记</span>
+        </li>
+        <li class="ftr4">
+            <span class="filter ft4" data-filter="shoucang"><i class="glyphicon glyphicon-paperclip"></i>&nbsp收藏</span>
+        </li>
+        <li class="ftr5">
+            <span class="filter" data-filter="luntan"><i class="glyphicon glyphicon-text-color"></i>&nbsp论坛</span>
+        </li>
+    </ul>
+    <div class="row ci" >
+        <div class="col-md-3 col-xs-12 col-sm-6"
+             style="background-color:#ece8e8;border:1px solid white;">
+            <!--<h3>Java</h3>-->
+            <div class="ig-0">
+                <img src="images/20181109.jpg" style="width:150px;height:75px;border:1px solid #d0cbcb">
+            </div>
+            <p>Java是一门面向对象编程语言，不仅吸收了C++语言的各种优点，还摒弃了C++里难以理解的多继承、指针等概念，
+                因此Java语言具有功能强大和简单易用两个特征。
+                Java语言作为静态面向对象编程语言的代表，极好地实现了面向对象理论，允许程序员以优雅的思维方式进行复杂的编程 。
+            </p>
+        </div>
+        <div class="col-md-3 col-xs-12 col-sm-6" style="background-color:#ece8e8;border:1px solid white;">
+            <!--<h3>C#</h3>-->
+            <div class="ig-0">
+                <img src="images/20181109-cjin.jpg" style="width:180px;height:75px;border:1px solid #d0cbcb">
+            </div>
+            <p>C#是安全的、稳定的、简单的、优雅的，由C和C++衍生出来的面向对象的编程语言。
+                它继承C和C++强大功能的同时去掉了一些它们的复杂特性。
+                C#综合了VB简单的可视化操作和C++的高运行效率，以强大的操作能力、优雅的语法风格、便捷的面向组件编程的支持成为.NET开发的语言。
+            </p>
+        </div>
+        <div class="clearfix visible-xs"></div><!--clearfix:清除左右两边浮动-->
+
+        <div class="col-md-3 col-xs-12 col-sm-6"
+             style="background-color:#ece8e8;border:1px solid white;">
+           <!--<h3>Android</h3>-->
+            <div class="ig-0">
+                <img src="images/20181109-android0.jpg" style="width:150px;height:75px;border:1px solid #d0cbcb">
+            </div>
+            <p>
+                Android 是运行于 Linux kernel之上，但并不是GNU/Linux。
+                因为在一般GNU/Linux 里支持的功能，Android 大都没有支持，
+                包括Cairo、X11、Alsa、FFmpeg、GTK、Pango及Glibc等都被移除掉了。
+                Android 为了达到商业应用，必须移除被GNU GPL授权证所约束的部份。
+            </p>
+        </div>
+        <div class="col-md-3 col-xs-12 col-sm-6 "
+             style="background-color:#ece8e8;border:1px solid white;">
+            <!--box-shadow:
+        inset 1px -1px 1px #19b955, inset -1px 1px 1px #19b955;inset嵌入,将外部阴影改为内部阴影;box-shadow:向框添加一个或多个阴影-->
+            <!--<h3>Python</h3>-->
+            <div class="ig-0">
+                <img src="images/20181109Python.jpg" style="width:150px;height:75px;border:1px solid #d0cbcb">
+            </div>
+            <p>
+                Python是一种计算机程序设计语言。是动态的、面向对象的脚本语言，
+                最初被设计用于编写自动化脚本(shell)， 随着版本不断更新和语言新功能的添加，
+                越来越多被用于独立的、大型项目的开发。
+                自20世纪90年代初Python语言诞生至今，它已被逐渐广泛应用于系统管理任务的处理和Web编程。
+            </p>
+        </div>
+    </div>
+    <!--课程表格-->
+</div>
+        <div class="tb1">
+            <div class="cs-0">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>我的课程</th>
+                    <th>进度</th>
+                    <th>金额</th>
+                    <th>学期</th>
+                </tr>
+                </thead>
+                <tr>
+                    <!--data-label:数据标签-->
+                    <td data-label="课程" class="t0">课程 #1</td>
+                    <td data-label="进度">60%</td>
+                    <td data-label="金额">2,311</td>
+                    <td data-label="周期">01/01/2015 - 01/31/2015</td>
+                </tr>
+                <tr>
+                    <td data-label="课程" class="t0">课程 #2</td>
+                    <td data-label="进度">23%</td>
+                    <td data-label="金额">3,211</td>
+                    <td data-label="周期">02/01/2015 - 02/28/2015</td>
+                </tr>
+                <tr>
+                    <td data-label="课程" class="t0">课程 #2</td>
+                    <td data-label="进度">23%</td>
+                    <td data-label="金额">3,211</td>
+                    <td data-label="周期">02/01/2015 - 02/28/2015</td>
+                </tr>
+            </table>
+
+            <div class="table00" style="text-align:right;">
+                <a href="about.html" style="font-size:18px;text-decoration:none;">
+                    进入
+                    <span class="glyphicon glyphicon-menu-right" ></span>
+                </a>
+            </div>
+            </div>
+            <!--visibility:hidden;隐藏但保留所占空间-->
+            <!--问题-->
+            <div class="cs-1"  style="margin:auto;">
+                <!--<p style="color:#333;text-align: center;background-color:honeydew;">一二三四五六七八九十</p>-->
+                 <table class="table1 table-striped">
+                     <thead>
+                     <tr>
+                         <th>我的问题</th>
+                         <th>创建时间</th>
+                         <th>回复</th>
+                     </tr>
+                     </thead>
+                     <tbody>
+                     <tr>
+                         <td class="td-21" >Python基本语法：循环函数怎么写？</td>
+                         <td class="td-22">2018/11/11&nbsp09:18:30</td>
+                         <td>这个怎么写的啊？我也想知道.</td>
+                     </tr>
+                     <tr>
+                         <td class="td-21" >AJAX怎么请求服务器的数据</td>
+                         <td class="td-22">2018/10/09&nbsp05:18:30</td>
+                         <td>同求</td>
+                     </tr>
+                     <tr>
+                         <td class="td-21">通过AJAX怎么加载txt文件内容到html的指定标签上</td>
+                         <td class="td-22">2018/10/01&nbsp08:39:30</td>
+                         <td>不会</td>
+                     </tr>
+                     <tr>
+                         <td class="td-21" >为什么在jsp中要用request来获取其它对象呢？/td>
+                         <td class="td-22">2018/09/23&nbsp15:08:30</td>
+                         <td>我试了一下都是可以的，应该是为了让我们看的更清楚一点</td>
+                     </tr>
+                     <tr>
+                         <td class="td-21">关于session生命周期的问题如题
+                             我实验多次，发现除了session过期之外，session关闭服务器并没有销毁，此对象可能一直存在，
+                             而重启服务器并重新打开浏览器这个时候才调用了销毁方法并同时创建新的session</td>
+                         <td class="td-22">2018/09/03&nbsp21:30:30</td>
+                         <td>我的也是，怎么重启服务器都不输出创建和销毁的信息</td>
+                     </tr>
+                     </tbody>
+                 </table>
+                <div class="bg-0">
+                    <div class="bg-00">
+                        <a href="cour-wenti.html">管理&nbsp<span class="glyphicon glyphicon-asterisk"></span></a>
+                    </div>
+                </div>
+               <div class="fen-0">
+                   <a href="#">首页</a>
+                   <a href="#">上一页</a>
+                   <a href="#">1</a>
+                   <a href="#">2</a>
+                   <a href="#">下一页</a>
+                   <a href="#">尾页</a>
+               </div>
+           </div>
+            <div class="cs-2" style="margin:20px auto;">
+                <!--<p style="color:#333;text-align: center;background-color:honeydew;">十九八七六五四三二一</p>-->
+                <table class="table2 table-hover">
+                    <thead>
+                       <tr>
+                           <th>我的笔记</th>
+                           <th>时间</th>
+                       </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>笔记#1</td>
+                          <td class="td-32">2018/09/05&nbsp08:09:30</td>
+                      </tr>
+                      <tr>
+                          <td>笔记#2</td>
+                          <td class="td-32">2018/08/28&nbsp12:30:36</td>
+                      </tr>
+                      <tr>
+                          <td>笔记#3</td>
+                          <td class="td-32">2018/08/15&nbsp12:30:45</td>
+                      </tr>
+                    </tbody>
+                </table>
+                <div class="bg-1">
+                    <div class="bg-10">
+                        <a href="cour-biji.html">管理&nbsp<span class="glyphicon glyphicon-asterisk"></span></a>
+                    </div>
+                </div>
+                <div class="fen-1">
+                    <a href="#">首页</a>
+                    <a href="#">上一页</a>
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">下一页</a>
+                    <a href="#">尾页</a>
+                </div>
+            </div>
+            <div class="cs-3">
+                <div class=""style="border:1px solid gainsboro;border-radius:4px;width:100%;height:300px;text-align:center;">
+                    <p style="font-size:20px;margin-top:120px;color:darkgrey;">什么都没有阿!</p>
+                </div>
+            </div>
+        </div>
+<div class="gun-0">
+    <a href="#">消息:&nbsp&nbsp&nbsp实战组件与其他组件功能重叠，因此下架该组件。</a>
+    <a href="#"></a>
+    <a href="#"></a>
+</div>
+    <div class="botton-0" style="background-color:#1793d1;">
+        <div class="container" style="width:100%;">
+            <div class="row" style="height:135px;padding-top:35px;">
+                <div class="col-md-1 zui-x0">
+                    <div class="row" style="text-align:center;">
+                    <a href="#"><img style="width:40px;height:40px;" src="images/TQQ.png" title="QQ群:850959941"></a>
+                    <a href="#"><img style="width:50px;height:40px;" src="images/微信.png" title="微信不晓得"></a>
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-6 zui-x1" style="font-size:2em;"><a href="#" style="color:black;">联系我们</a></div>
+                <div class="col-md-2 col-sm-6" style="color:black;font-size:1em;text-align:center;">@Copyright2018.Come from disanzu .TX</div>
+            </div>
+        </div>
+    </div>
+ </div>
+<div class="p1" >
+    <div><a href="My.html"><span class="glyphicon glyphicon-education"></span>&nbsp个人中心</a></div>
+</div>
+</body>
+</html>

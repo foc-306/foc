@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="css/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <title>biji</title>
+    <style>
+        *{margin:0;padding:0;border-sizing:border-box;}
+         p{margin:0;}
+        a{text-decoration:none;}
+        a:hover{text-decoration:none;}
+        a:focus{text-decoration:none;}/*失去焦点后*/
+        ul{list-style:none;}
+        li a{text-decoration:none;}
+
+        .head-r{width:100%;
+            height:80px;
+            background-color:#0facf3;}
+        .r0{padding:25px 5px;font-size:18px;}
+        .r0 a{color:white;}
+        .r0 a:hover{color:white;}
+
+        .bod-1{width:100%;
+            margin-top:10px;
+        }
+        .nav-1{width:90%;
+            height:700px;
+            color:#333;
+            margin:0 auto;
+        }
+        .tb1{border:1px solid transparent;}
+        #quan li,#zhong li{width:100%;
+            height:auto;
+            border:1px solid;
+            border-color:transparent transparent gainsboro transparent;
+        }
+        .nav li a{color:#333;}
+        .xnei_rong{width:100%;
+            height:20px;
+        }
+        .kec_m a{color:#333;}
+        .kec_m a:hover{color:#0facf3;}
+        .xnei_zuo{width:80%;
+            float:left;
+            overflow:hidden;
+            white-space:nowrap;
+            text-overflow:ellipsis;
+        }
+        .xnei_anniu{width:20%;
+            float:right;
+        }
+        .x_an{width:70px;
+            margin:0 auto;
+            text-align: center;
+            border:1px solid gainsboro;
+        }
+        .zxnei{width:100%;height:25px;margin-top:5px;}
+        .zx_bian{width:10%;
+            float:left;
+        }
+        .bian_1{margin:0 auto;
+            border:1px solid gainsboro;
+            width:40px;
+            text-align: center;
+        }
+        .zx_shan{width:70%;
+            float:left;
+        }
+        .shan_1{
+            border:1px solid gainsboro;
+            width:40px;
+            text-align: center;
+        }
+        .bian_1:hover,.shan_1:hover,.x_an:hover{cursor:pointer;background-color:gainsboro;}
+        .zx_sj{width:20%;
+            float:right;
+            text-align:center;
+            color:#aba9a9;
+        }
+
+        #ke li{width:100%;
+            height:auto;
+            border:1px solid;
+            border-color:transparent transparent gainsboro transparent;
+        }
+        .zhu_ke{width:100%;height:auto;}
+        /*li左边内容*/
+        .kec_m1{width:200px;height:150px;float:left;}
+        .kec_m1tu{margin:1px;
+            width:200px;
+        }
+        .kec_m1 img{width:198px;
+            height:119px;}
+        .kec_m1 p{margin:2px auto;
+            text-align:center;
+            font-size:1.5em;
+        }
+        /*li右边内容*/
+        .kec_youx{width:78%;
+            height:150px;
+            float:left;
+            border:1px solid;
+            border-color:transparent transparent transparent gainsboro;
+        }
+        .you_shu_l{width:100%;
+            height:75px;
+            padding-top:22.5px;
+            border:1px solid;
+            border-color:transparent transparent gainsboro transparent;
+        }
+        .you_shu_l_1{width:100px;height:auto;}
+        .shuliang,.shu_liang,.tiao{float:left;
+            font-size:18px;
+        }
+        .shuliang,.tiao{color:#86c4e8;}
+        .shu_liang{color:#d2c6c6;}
+
+        .you_an_n{width:100%;
+            height:75px;
+            padding-top:22.5px;
+            border:1px solid;
+            border-color:transparent;}
+        .an_1{width:50px;
+            height:auto;
+            float:right;
+            color:deepskyblue;
+            cursor:pointer;
+            text-align:center;
+            border-radius:4px;
+            margin-right:5px;}
+        .an_1:hover{background-color:#a09e9e;
+            color:white;
+        }
+
+
+
+    </style>
+    <style>
+        @media screen and (max-width:1032px){
+            .kec_m1,.you_shu_l_1,.an_1{margin:0 auto;
+                float:none;
+            }
+            .kec_youx{width:100%;
+                height:100px;
+                border-color:gainsboro transparent transparent transparent;
+            }
+            .you_shu_l,.you_an_n{height:50px;
+                padding-top:10px;
+            }
+        }
+        @media screen and (max-width: 768px){
+            .c1{text-align: right;}
+        }
+    </style>
+</head>
+<body>
+<div class="head-r">
+    <div class="container-fluid">
+        <div class="row r0">
+            <div class="col-md-1 col-sm-2 col-xs-4"><img src="#" alt="error"></div>
+            <div class="col-md-9 col-sm-9 col-xs-4"><a href="#">**获取用户名**</a></div>
+            <div class="col-md-2 col-sm-1 col-xs-4 c1"><a href="courses0.html">返回</a></div>
+        </div>
+    </div>
+</div>
+<div class="bod-1">
+    <div class="nav-1">
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="#quan" data-toggle="tab">全部</a></li>
+            <li role="presentation"><a href="#ke" data-toggle="tab">课程</a></li>
+            <li role="presentation"><a href="#zhong" data-toggle="tab">重点</a></li>
+        </ul>
+        <!--表格内容
+        如果需要为标签页设置淡入淡出效果,请添加 .fade 到每个 .tab-pane 后面。
+        第一个标签页必须添加 .in 类,以便淡入显示初始内容
+        -->
+        <div class="tab-content tb1">
+            <!--第一个-->
+            <div class="tab-pane fade in active" id="quan">
+               <ul class="clearfix">
+                   <li>
+                       <div class="gai_nei clearfix">
+                           <div class="kec_m">
+                               <a href="javascript:;"><h4>Java</h4></a>
+                           </div>
+                           <div class="xnei_rong">
+                               <div class="xnei_zuo">
+                                   1、分别查询出不同同学的成绩，并将字段名改为同学的名字
+                               </div>
+                               <div class="xnei_anniu">
+                                   <div class="x_an">查看全文</div>
+                               </div>
+                           </div>
+                           <div class="zxnei">
+                               <div class="zx_bian">
+                                   <div class="bian_1"> 编辑</div>
+                               </div>
+                               <div class="zx_shan">
+                                   <div class="shan_1">删除</div>
+                               </div>
+                               <div class="zx_sj">
+                                   2018-09-05
+                               </div>
+                           </div>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="gai_nei clearfix">
+                           <div class="kec_m">
+                               <a href="javascript:;"><h4>JQuery</h4></a>
+                           </div>
+                           <div class="xnei_rong">
+                               <div class="xnei_zuo">
+                                   jQuery children() 方法
+                                   children() 方法返回被选元素的所有直接子元素。
+                                   该方法只会向下一级对 DOM 树进行遍历。
+                               </div>
+                               <div class="xnei_anniu">
+                                   <div class="x_an">查看全文</div>
+                               </div>
+                           </div>
+                           <div class="zxnei">
+                               <div class="zx_bian">
+                                   <div class="bian_1"> 编辑</div>
+                               </div>
+                               <div class="zx_shan">
+                                   <div class="shan_1">删除</div>
+                               </div>
+                               <div class="zx_sj">
+                                   2018-08-28
+                               </div>
+                           </div>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="gai_nei clearfix">
+                           <div class="kec_m">
+                               <a href="javascript:;"><h4>JQuery</h4></a>
+                           </div>
+                           <div class="xnei_rong">
+                               <div class="xnei_zuo">
+                                   $("div p").first(); 指的是(我是里面的 div 内容)
+                                   总结：也就是说，遇到嵌套的情况时优先级是从里到外 ，从前到后。
+                                   last() 也是同理，顺序是 从里到外，从后到前。
+                               </div>
+                               <div class="xnei_anniu">
+                                   <div class="x_an">查看全文</div>
+                               </div>
+                           </div>
+                           <div class="zxnei">
+                               <div class="zx_bian">
+                                   <div class="bian_1"> 编辑</div>
+                               </div>
+                               <div class="zx_shan">
+                                   <div class="shan_1">删除</div>
+                               </div>
+                               <div class="zx_sj">
+                                   2018-08-15
+                               </div>
+                           </div>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="gai_nei clearfix">
+                           <div class="kec_m">
+                               <a href="javascript:;"><h4>JQuery</h4></a>
+                           </div>
+                           <div class="xnei_rong">
+                               <div class="xnei_zuo">
+                                   DOM 定义访问 HTML 和 XML 文档的标准：
+                                   "W3C 文档对象模型独立于平台和语言的界面，
+                                   允许程序和脚本动态访问和更新文档的内容、结构以及样式。"
+                               </div>
+                               <div class="xnei_anniu">
+                                   <div class="x_an">查看全文</div>
+                               </div>
+                           </div>
+                           <div class="zxnei">
+                               <div class="zx_bian">
+                                   <div class="bian_1"> 编辑</div>
+                               </div>
+                               <div class="zx_shan">
+                                   <div class="shan_1">删除</div>
+                               </div>
+                               <div class="zx_sj">
+                                   2018-08-05
+                               </div>
+                           </div>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="gai_nei clearfix">
+                           <div class="kec_m">
+                               <a href="javascript:;"><h4>C#</h4></a>
+                           </div>
+                           <div class="xnei_rong">
+                               <div class="xnei_zuo">
+                                   逻辑与( && ):只有当&&两边的表达式均为tru 时，整个表达式才为true
+                                   逻辑或( || ):只要||两边的表达式有一个为true ，整个表达式即为true；
+                                   若两边的表达式均为false，整个表达式为false
+                               </div>
+                               <div class="xnei_anniu">
+                                   <div class="x_an">查看全文</div>
+                               </div>
+                           </div>
+                           <div class="zxnei">
+                               <div class="zx_bian">
+                                   <div class="bian_1"> 编辑</div>
+                               </div>
+                               <div class="zx_shan">
+                                   <div class="shan_1">删除</div>
+                               </div>
+                               <div class="zx_sj">
+                                   2018-08-03
+                               </div>
+                           </div>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="gai_nei clearfix">
+                           <div class="kec_m">
+                               <a href="javascript:;"><h4>Python</h4></a>
+                           </div>
+                           <div class="xnei_rong">
+                               <div class="xnei_zuo">
+                                   from _future_ import division 确保一个数除以另外一个数不等于0，
+                                   会返回一个浮点型的数
+                               </div>
+                               <div class="xnei_anniu">
+                                   <div class="x_an">查看全文</div>
+                               </div>
+                           </div>
+                           <div class="zxnei">
+                               <div class="zx_bian">
+                                   <div class="bian_1"> 编辑</div>
+                               </div>
+                               <div class="zx_shan">
+                                   <div class="shan_1">删除</div>
+                               </div>
+                               <div class="zx_sj">
+                                   2018-08-01
+                               </div>
+                           </div>
+                       </div>
+                   </li>
+               </ul>
+            </div>
+<!--第二个-->
+            <div class="tab-pane fade" id="ke">
+                <ul>
+                    <li class="clearfix">
+                        <div class="zhu_ke">
+                            <div class="kec_m1">
+                                <div class="kec_m1tu">
+                                <img src="images/2018Java.jpg">
+                                </div>
+                                <p>Java</p>
+                            </div>
+                            <div class="kec_youx">
+                                <div class="you_shu_l">
+                                    <div class="you_shu_l_1">
+                                    <div class="shuliang">&nbsp数量:&nbsp</div>
+                                    <p class="shu_liang">1</p><span class="tiao">&nbsp条</span>
+                                    </div>
+                                </div>
+                                <div class="you_an_n">
+                                    <div class="an_1">
+                                        <span>进入</span><i class="glyphicon glyphicon-triangle-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="clearfix">
+                        <div class="zhu_ke">
+                            <div class="kec_m1">
+                                <div class="kec_m1tu">
+                                    <img src="images/2018Python.png">
+                                </div>
+                                <p>Python</p>
+                            </div>
+                            <div class="kec_youx">
+                                <div class="you_shu_l">
+                                    <div class="you_shu_l_1">
+                                        <div class="shuliang">&nbsp数量:&nbsp</div>
+                                        <p class="shu_liang">1</p><span class="tiao">&nbsp条</span>
+                                    </div>
+                                </div>
+                                <div class="you_an_n">
+                                    <div class="an_1">
+                                        <span>进入</span><i class="glyphicon glyphicon-triangle-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="clearfix">
+                        <div class="zhu_ke">
+                            <div class="kec_m1">
+                                <div class="kec_m1tu">
+                                    <img src="images/2018C+.jpg">
+                                </div>
+                                <p>C#</p>
+                            </div>
+                            <div class="kec_youx">
+                                <div class="you_shu_l">
+                                    <div class="you_shu_l_1">
+                                        <div class="shuliang">&nbsp数量:&nbsp</div>
+                                        <p class="shu_liang">1</p><span class="tiao">&nbsp条</span>
+                                    </div>
+                                </div>
+                                <div class="you_an_n">
+                                    <div class="an_1">
+                                        <span>进入</span><i class="glyphicon glyphicon-triangle-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="zhu_ke">
+                            <div class="kec_m1">
+                                <div class="kec_m1tu">
+                                    <img src="images/20181109-JQuery.png">
+                                </div>
+                                <p>JQuery</p>
+                            </div>
+                            <div class="kec_youx">
+                                <div class="you_shu_l">
+                                    <div class="you_shu_l_1">
+                                        <div class="shuliang">&nbsp数量:&nbsp</div>
+                                        <p class="shu_liang">3</p><span class="tiao">&nbsp条</span>
+                                    </div>
+                                </div>
+                                <div class="you_an_n">
+                                    <div class="an_1">
+                                        <span>进入</span><i class="glyphicon glyphicon-triangle-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+<!--第三个-->
+            <div class="tab-panee fade" id="zhong">
+                <ul class="clearfix">
+                    <li>
+                        <div class="gai_nei clearfix">
+                            <div class="kec_m">
+                                <a href="javascript:;"><h4>Java</h4></a>
+                            </div>
+                            <div class="xnei_rong">
+                                <div class="xnei_zuo">
+                                    1、分别查询出不同同学的成绩，并将字段名改为同学的名字
+                                </div>
+                                <div class="xnei_anniu">
+                                    <div class="x_an">查看全文</div>
+                                </div>
+                            </div>
+                            <div class="zxnei">
+                                <div class="zx_bian">
+                                    <div class="bian_1"> 编辑</div>
+                                </div>
+                                <div class="zx_shan">
+                                    <div class="shan_1">删除</div>
+                                </div>
+                                <div class="zx_sj">
+                                    2018-09-05
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="gai_nei clearfix">
+                            <div class="kec_m">
+                                <a href="javascript:;"><h4>JQuery</h4></a>
+                            </div>
+                            <div class="xnei_rong">
+                                <div class="xnei_zuo">
+                                    jQuery children() 方法
+                                    children() 方法返回被选元素的所有直接子元素。
+                                    该方法只会向下一级对 DOM 树进行遍历。
+                                </div>
+                                <div class="xnei_anniu">
+                                    <div class="x_an">查看全文</div>
+                                </div>
+                            </div>
+                            <div class="zxnei">
+                                <div class="zx_bian">
+                                    <div class="bian_1"> 编辑</div>
+                                </div>
+                                <div class="zx_shan">
+                                    <div class="shan_1">删除</div>
+                                </div>
+                                <div class="zx_sj">
+                                    2018-08-28
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="gai_nei clearfix">
+                            <div class="kec_m">
+                                <a href="javascript:;"><h4>JQuery</h4></a>
+                            </div>
+                            <div class="xnei_rong">
+                                <div class="xnei_zuo">
+                                    $("div p").first(); 指的是(我是里面的 div 内容)
+                                    总结：也就是说，遇到嵌套的情况时优先级是从里到外 ，从前到后。
+                                    last() 也是同理，顺序是 从里到外，从后到前。
+                                </div>
+                                <div class="xnei_anniu">
+                                    <div class="x_an">查看全文</div>
+                                </div>
+                            </div>
+                            <div class="zxnei">
+                                <div class="zx_bian">
+                                    <div class="bian_1"> 编辑</div>
+                                </div>
+                                <div class="zx_shan">
+                                    <div class="shan_1">删除</div>
+                                </div>
+                                <div class="zx_sj">
+                                    2018-08-15
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="gai_nei clearfix">
+                            <div class="kec_m">
+                                <a href="javascript:;"><h4>JQuery</h4></a>
+                            </div>
+                            <div class="xnei_rong">
+                                <div class="xnei_zuo">
+                                    DOM 定义访问 HTML 和 XML 文档的标准：
+                                    "W3C 文档对象模型独立于平台和语言的界面，
+                                    允许程序和脚本动态访问和更新文档的内容、结构以及样式。"
+                                </div>
+                                <div class="xnei_anniu">
+                                    <div class="x_an">查看全文</div>
+                                </div>
+                            </div>
+                            <div class="zxnei">
+                                <div class="zx_bian">
+                                    <div class="bian_1"> 编辑</div>
+                                </div>
+                                <div class="zx_shan">
+                                    <div class="shan_1">删除</div>
+                                </div>
+                                <div class="zx_sj">
+                                    2018-08-05
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

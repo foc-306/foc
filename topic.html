@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>话题</title>
+<meta name="viewport" charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<meta name="keywords" content="Bootstrap Responsive Templates, Iphone Compatible Templates, Smartphone Compatible Templates, Ipad Compatible Templates, Flat Responsive Templates"/>
+	<link href="css/bootstrap/bootstrap.min.css" rel='stylesheet' type='text/css'>
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script src="js/jquery.min.js"></script>  
+<!---- start-smoth-scrolling---->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+	<style type="text/css">
+
+
+	</style>
+
+<!---- start-smoth-scrolling---->
+<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+<script type="text/javascript">
+$(function () {
+	
+	var filterList = {
+	
+		init: function () {
+		
+			// MixItUp plugin
+			// http://mixitup.io
+			$('#portfoliolist').mixitup({
+				targetSelector: '.portfolio',
+				filterSelector: '.filter',
+				effects: ['fade'],
+				easing: 'snap',
+				// call the hover effect
+				onMixEnd: filterList.hoverEffect()
+			});				
+		
+		},
+		
+		hoverEffect: function () {
+		
+			// Simple parallax effect
+			$('#portfoliolist .portfolio').hover(
+				function () {
+					$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+					$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+				},
+				function () {
+					$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+					$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+				}		
+			);				
+		
+		}
+
+	};
+	
+	// Run the show!
+	filterList.init();
+	
+	
+});	
+</script>
+</head>
+<body>
+	<div class="banner1" id="home">
+
+			<div class="header">
+				<div class="menu">
+                                     <a class="toggleMenu" href="#" style="color:#0facf3;"><span class="glyphicon glyphicon-menu-hamburger" style="font-size:30px;"> </a>
+					<ul class="nav" id="nav">
+					<li><a href="index.html">主页</a></li>
+					<li><a href="about.html">免费课程</a></li>
+					<li><a href="academics.html">Academics</a></li>
+					<li><a href="admissions.html">Admissions</a></li>
+					<li class="active"><a href="courses.html" class="active">学习天地</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					</ul>
+                                  <!----start-top-nav-script---->
+		                      <script type="text/javascript" src="js/responsive-nav.js"></script>
+					<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$(".scroll").click(function(event){		
+							event.preventDefault();
+							$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+						});
+					});
+					</script>
+		<!----//End-top-nav-script---->
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+
+	</div>
+	<!-- Portfolio Starts Here -->
+	<div class="portfolios" id="portfolio">
+		<div class="container">
+			<h3 class="top-head w_hd">话题</h3>
+			<span class="line w_l_1">
+				<span class="sub-line w_l_1"></span>
+			</span>
+			<div class="input-group col-md-4 col-xs-8" style="margin: 0 auto;">
+			  <span class="input-group-addon" id="basic-addon1">话题</span>
+			  <input type="text" class="form-control" placeholder="搜索话题" aria-describedby="basic-addon1">
+			</div>
+			<ul id="filters" class="clearfix">
+						<li><span class="filter active" data-filter="hot new icon logo web">所有话题</span></li>
+						<li><span class="filter" data-filter="hot">热门话题</span></li>
+						<li><span class="filter" data-filter="new">最新话题</span></li>
+					</ul>
+					<div id="portfoliolist">
+					<div class="portfolio hot mix_all" data-cat="hot" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="index.html" class="b-link-stripe b-animate-go  thickbox">
+						    <div class="port-1">
+						    	<h5>跟大神学实用时间管理：让你每天效率翻三倍</h5>
+						    	<p>自己的时间不够用？事情做不完？总是爱拖沓？工作容易分心？效率低下每天多出2小时，做自己喜欢的事！</p>
+						    	<div class="port-bttn">
+						    		<a href="#">阅读更多</a>
+						    	</div>
+						    </div>
+						     <div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "></h2>
+						  		</div></a>
+		                </div>
+					</div>				
+					<div class="portfolio new mix_all" data-cat="new" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="index.html" class="b-link-stripe b-animate-go  thickbox">
+						     <div class="port-1">
+						    	<h5>快速学习，走向人生巅峰</h5>
+						    	<p>互联网的快速发展和激烈竞争，用户体验成为一个重要的关注点，导致专业前端工程师成为热门职业，各大公司对前端工程师的需求量都很大，要求也越来越高.</p>
+						    	<div class="port-bttn">
+						    		<a href="#">阅读更多</a>
+						    	</div>
+						    </div>
+						     <div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "></h2>
+						  	 </div></a>
+		                </div>
+					</div>		
+					<div class="portfolio new mix_all" data-cat="new" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="index.html" class="b-link-stripe b-animate-go  thickbox">
+						    <div class="port-1">
+						    	<h5>W3school小白网站</h5>
+						    	<p>领先的 Web 技术教程 – 全部免费，从基础的 HTML 到 CSS，乃至进阶的XML、SQL、JS、PHP 和 ASP.NET.W3School 是因特网上最大的 WEB 开发者资源，是完全免费的。</p>
+						    	<div class="port-bttn">
+						    		<a href="#">阅读更多</a>
+						    	</div>
+						    </div>
+						     <div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "></h2>
+						  	 </div></a>
+		                </div>
+					</div>				
+					<div class="portfolio new mix_all" data-cat="new" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="index.html" class="b-link-stripe b-animate-go  thickbox">
+						     <div class="port-1">
+						    	<h5>人工智能AI对话</h5>
+						    	<p>研究、开发用于模拟、延伸和扩展人的智能的理论、方法、技术及应用系统的一门新的技术科学。人工智能是计算机科学的....</p>
+						    	<div class="port-bttn">
+						    		<a href="#">阅读更多</a>
+						    	</div>
+						    </div>
+						     <div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "></h2>
+						  	 </div></a>
+		                </div>
+					</div>	
+					<div class="portfolio hot mix_all" data-cat="hot" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="index.html" class="b-link-stripe b-animate-go  thickbox">
+						     <div class="port-1">
+						    	<h5>零基础自学开发</h5>
+						    	<p>学基础的时候多敲代码，做一些小例子，不要怕麻烦，常用API用熟练。</p>
+						    	<div class="port-bttn">
+						    		<a href="#">阅读更多</a>
+						    	</div>
+						    </div>
+						     <div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "></h2>
+						  	 </div></a>
+		                </div>
+					</div>			
+					<div class="portfolio new mix_all" data-cat="new" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="index.html" class="b-link-stripe b-animate-go  thickbox">
+						     <div class="port-1">
+						    	<h5>自己自学学习路径</h5>
+						    	<p>自学需要一个由浅入深的过程，先从简单的概念入手，再慢慢向深层概念。自学需要一个由浅入深的过程，先从简单的概念入手，再慢慢向深层概念。</p>
+						    	<div class="port-bttn">
+						    		<a href="#">阅读更多</a>
+						    	</div>
+						    </div>
+						     <div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "></h2>
+						  	 </div></a>
+		                </div>
+					</div>	
+					<div class="portfolio new mix_all" data-cat="new" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="index.html" class="b-link-stripe b-animate-go  thickbox">
+						     <div class="port-1">
+						    	<h5>毕业后编程工作好找吗</h5>
+						    	<p>一般来说还是比较好找的，出来以后可以找游戏公司一类的帮着其中一部分的编排，总的来说蛮容易就业的。</p>
+						    	<div class="port-bttn">
+						    		<a href="#">阅读更多</a>
+						    	</div>
+						    </div>
+						     <div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "></h2>
+						  	 </div></a>
+		                </div>
+					</div>
+					<div class="portfolio hot mix_all" data-cat="hot" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="index.html" class="b-link-stripe b-animate-go  thickbox">
+						     <div class="port-1">
+						    	<h5>网站的视频怎么找</h5>
+						    	<p>根据自己的学习方向，网站提供对应专业方向学习视频等，可以自行去观看免费视频.</p>
+						    	<div class="port-bttn">
+						    		<a href="#">阅读更多</a>
+						    	</div>
+						    </div>
+						     <div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "></h2>
+						  	 </div></a>
+		                </div>
+					</div>
+					<div class="portfolio new mix_all" data-cat="new" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="index.html" class="b-link-stripe b-animate-go  thickbox">
+						     <div class="port-1">
+						    	<h5>视频都是免费的吗</h5>
+						    	<p>想多看看视频，是不是都是免费的啊，有木有专业推荐等...</p>
+						    	<div class="port-bttn">
+						    		<a href="#">阅读更多</a>
+						    	</div>
+						    </div>
+						     <div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "></h2>
+						  	 </div></a>
+		                </div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+		</div>
+	</div>
+	<!-- Portfolio Ends Here -->
+	<!--start-footer-->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-main">
+				<div class="col-md-12 footer-right">
+					<p>版权所有©爱学网 | 地址：南昌市西湖区安石路69号 | QQ：850959941 | 京ICP备00000001号-1 | 京公网安备 21325451654 号 </p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<script type="text/javascript">
+            $(document).ready(function() {
+                /*
+                var defaults = {
+                      containerID: 'toTop', // fading element id
+                    containerHoverID: 'toTopHover', // fading element hover id
+                    scrollSpeed: 1200,
+                    easingType: 'linear'
+                 };
+                */
+
+                $().UItoTop({ easingType: 'easeOutQuart' });
+
+            });
+		</script>
+		<a href="#home" id="toTop" class="scroll" style="display: block;" title="返回顶部"> <span id="toTopHover" style="opacity: 1;"></span></a>
+	</div>
+	<!--end-footer-->
+
+</body>
+</html>

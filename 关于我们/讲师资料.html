@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>爱学网</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="keywords" content="Bootstrap Responsive Templates, Iphone Compatible Templates, Smartphone Compatible Templates, Ipad Compatible Templates, Flat Responsive Templates"/>
+        <link href="../css/bootstrap/bootstrap.min.css" rel='stylesheet' type='text/css'>
+        <link href="../css/style.css" rel='stylesheet' type='text/css' />
+        <link href="../css/sidebar.css" rel='stylesheet' type='text/css' />
+
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+		<style type="text/css">
+			.leftOne{
+				box-shadow:0px 0px 0px #000;
+			}
+
+			.leftOne div ul li{
+
+			}
+			.leftTwo{
+				margin-top:15px;
+				float:left;
+				padding-left:0;
+				box-shadow:0 0 7px #808080;
+
+			}
+
+			.leftTwo li{
+				list-style-type:none;
+				background-color:#fff;
+				width:260px;
+				height:60px;
+				border-bottom:1px solid rgba(96 , 96, 96, 0.3);
+				border-left:5px solid #fff;
+				border-right:5px solid #fff;
+				text-align:center;
+				line-height:60px;
+			}
+			.leftTwo li a{
+				text-decoration:none;
+				color:rgba(96 , 96, 96, 0.7);
+			}
+			.leftTwo li a:hover{
+				color:#0facf3;
+				transition:0s;
+			}
+			.leftTwo li a:focus{
+				color:#0facf3;
+			}
+			.leftTwo li a:hover{
+				color:#0facf3;
+			}
+			.footer{
+				margin-top: 10px;
+				background-color:#0facf3;
+			}
+			.active{
+
+			}
+			.img-add{
+				background-color:#fff;box-shadow:0 0 7px #808080;float:left;margin-top:15px;
+			}
+			.img-add > div > div{ margin:15px 0;}
+			.img-add div{margin:15px 0;}
+			.img-add img{
+				margin: 15px 0;
+				border-radius:4px;
+				border:1px solid #DAE0E4;
+			}
+			.img-add img:hover{
+				box-shadow:0 5px 10px #33333380;
+				transition:0.3s;
+				transform: scale(1.1);
+			}
+			.img-add h3{margin: 15px 0;}
+			.img-add p{
+				color:#959191;
+				font-size:15px;
+			}
+			.img-add a{
+				color:#010101;
+				font-size:35px;
+			}
+		</style>
+	</head>
+	<body>
+    <div class="header">
+        <div class="menu">
+            <a class="toggleMenu" href="#" style="color:#0facf3;"><span class="glyphicon glyphicon-menu-hamburger" style="font-size:30px;"></span> </a>
+            <ul class="nav" id="nav">
+                <li><a href="../index.html">主页</a></li>
+                <li><a href="../about.html">免费课程</a></li>
+                <li><a href="../live.html">课程直播</a></li>
+                <li><a href="../forum.html">lt</a></li>
+                <li><a href="../courses0.html">学习天地</a></li>
+                <li class="active"><a href="../contact.html" class="active">讲师资料</a></li>
+            </ul>
+            <!----start-top-nav-script---->
+            <script type="text/javascript" src="../js/responsive-nav.js"></script>
+            <script type="text/javascript">
+                jQuery(document).ready(function($) {
+                    $(".scroll").click(function(event){
+                        event.preventDefault();
+                        $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+                    });
+                });
+            </script>
+            <!----//End-top-nav-script---->
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+
+	<section class="leftOne">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<ul class="leftTwo">
+						<li><a href="关于我们.html">关于我们</a></li>
+						<li><a href="团队介绍.html">团队介绍</a></li>
+						<li><a href="人才招聘.html">人才招聘</a></li>
+						<li><a href="讲师招募.html">讲师招募</a></li>
+						<li class="active" style="border-left:5px solid #0facf3;"><a href="讲师资料.html">讲师资料</a></li>
+						<li><a href="意见反馈.html">意见反馈</a></li>
+					</ul>
+				</div>
+				<div class="col-md-9">
+					<div class="col-md-12 img-add">
+						<div class="col-md-12" style="background-color:#b7b7b733;">
+							<div class="col-md-1"></div>
+							<div class="col-md-4">
+								<img src="../images/p-1.jpg">
+							</div>
+
+							<div class="col-md-6">
+								<h3><a href="">Ash</a></h3>
+								<h4>高级工程师</h4>
+								<p>
+									五年开发经验，一直在从事Android App的开发，热爱App开发，对应用开发有自己的经验积累，擅长App的调优工作，一直在CSDN上写一些技术型博客，在Github上有自己的一些小项目，乐于分享
+								</p>
+							</div>
+						</div>
+						<div class="col-md-12" style="background-color:#b7b7b733;">
+							<div class="col-md-1"></div>
+							<div class="col-md-6">
+								<h3><a href="">Jason</a></h3>
+								<h4>Python开发工程师</h4>
+								<p>
+									已有五年工作经验，主要负责汽车简历数据抓取、商业推广平台数据抓取及接口开发、竞品信息数据抓取等工作。 开发语言：python、autoit。项目中主要使用工具requests 多线程抓取网页系统数据，使用autoit抓取软件系统数据，使用appium抓取app系统数据等。使用scrapy进行大数据量信息抓取。
+								</p>
+							</div>
+
+							<div class="col-md-4">
+								<img src="../images/p-2.jpg">
+							</div>
+						</div>
+						<div class="col-md-12" style="background-color:#b7b7b733;">
+							<div class="col-md-1"></div>
+							<div class="col-md-4">
+								<img src="../images/pc-2.jpg">
+							</div>
+
+							<div class="col-md-6">
+								<h3><a href="">Wendy</a></h3>
+								<h4>Web前端工程师</h4>
+								<p>
+									多年来一直从事web开发，现就职于某一线视频社区网站，任web高级开发工程师一职。有着丰富的移动端页面制作经验，擅长处理各类移动端web开发问题，讲课细致生动，希望通过自己的讲解让更多的同学找到开发的乐趣。
+								</p>
+							</div>
+						</div>
+						<div class="col-md-12" style="background-color:#b7b7b733;">
+							<div class="col-md-1"></div>
+							<div class="col-md-6">
+								<h3><a href="">Maxwell</a></h3>
+								<h4>Java开发工程师</h4>
+								<p>
+									10余年JAVA架构设计与研发经验。应用架构和基础组件架构设计，对高并发、高可用、分布式系统设计有着丰富的经验和实战，精通互联网Java主流技术。
+								</p>
+							</div>
+
+							<div class="col-md-4">
+								<img src="../images/p-7.jpg">
+							</div>
+						</div>
+						<div class="col-md-12" style="background-color:#b7b7b733;">
+							<div class="col-md-1"></div>
+							<div class="col-md-4">
+								<img src="../images/p-5.jpg">
+							</div>
+
+							<div class="col-md-6">
+								<h3><a href="">Lucia</a></h3>
+								<h4>软件测试工程师</h4>
+								<p>
+									10年以上软件测试工作经验，5年多自动化测试开发经验精通SQL Server 数据库相关知识，精通Linux系统及命令精通Java基础语法与核心技术，精通HTML, CSS, Javascript,精通Web端应用测试及利用 Selenium, Java, TestNG, JUnit, Firebug, Firepath, locators
+								</p>
+							</div>
+						</div>
+						<div class="col-md-12" style="background-color:#b7b7b733;">
+							<div class="col-md-1"></div>
+							<div class="col-md-6">
+								<h3><a href="">Quinn</a></h3>
+								<h4>软件工程师</h4>
+								<p>
+									具有五年工作经验，曾先后在百度、腾讯工作。对机器学习算法抱有强烈的兴趣，先后从事过图像检索与分类、文本分类、人脸识别、广告点击率预估、图像翻译等方面的项目，有丰富的炼丹经验。讲课风格干货满满，希望大家能通过我的课程得到成长进步。
+								</p>
+							</div>
+
+							<div class="col-md-4">
+								<img src="../images/p-8.jpg">
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<div class="footer">
+		<div class="container">
+			<div class="footer-main">
+				<div class="col-md-12 footer-right">
+					<p>版权所有©爱学网 | 地址：南昌市西湖区安石路69号 | QQ：850959941 | 京ICP备00000001号-1 | 京公网安备 21325451654 号 </p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+
+	</body>
+</html>
+

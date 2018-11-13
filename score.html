@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>安全评分</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="keywords" content="Bootstrap Responsive Templates, Iphone Compatible Templates, Smartphone Compatible Templates, Ipad Compatible Templates, Flat Responsive Templates"/>
+    <link href="css/bootstrap/bootstrap.min.css" rel='stylesheet' type='text/css'>
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <link href="css/sidebar.css" rel='stylesheet' type='text/css' />
+    <link href="//at.alicdn.com/t/font_903175_4elpyc4eytf.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .scLeft{
+            margin-top:50px;
+            background-color:#fff;
+            border-radius:4px;
+            border: 1px solid #DAE0E4;
+            box-shadow: 0 1px 2px 0 rgba(158,172,182,.2);
+        }
+        .scLeft img{
+            border-radius:4px;
+            width:150px;
+            border:1px solid #DAE0E4;
+            margin-top:30px;
+            margin-bottom:15px;
+        }
+        .scLeft p{
+            font-size:20px;
+            margin:10px 0 10px 0;
+        }
+        .scLeft button{
+            margin:30px 0 30px 0;
+        }
+
+
+        .scRight{
+            margin-top:50px;
+            background-color:#fff;
+            border-radius:4px;
+            border: 1px solid #DAE0E4;
+            box-shadow: 0 1px 2px 0 rgba(158,172,182,.2);
+            min-height: 515px;
+        }
+        .scRight h3{
+            font-weight:bold;
+            font-size:22px;
+            margin-top:15px;
+            margin-bottom:35px;
+        }
+        .progress{
+            margin:15px 0 20px 0;
+            height:15px;
+            width: 90%
+        }
+        #btn2{
+            margin-top:5px;
+            margin-bottom:20px;
+        }
+        #div2{
+            display:none;
+        }
+        #div2 > div > div{
+            margin:15px 0 20px 0;
+            height:15px;
+            width: 70%
+        }
+
+
+
+        #tableAll{
+            margin-bottom:15px;
+        }
+        #tableAll th{
+            text-align: center;
+        }
+        #tableAll td{
+            text-align: center;
+        }
+        .tableOne{
+            background-color:#f3f3f3;
+            border-top:1px solid #dfdfdf;
+        }
+        .tableOne th{
+            font-size:17px;
+            color:#666;
+        }
+        .tableTwo{
+            border-bottom:1px solid #dfdfdf;
+        }
+        .tableTwo td{
+            font-size:13px;
+            color:#999;
+        }
+        .tableThree{
+            border-bottom:1px solid #dfdfdf;
+            background-color: #f0f0f0;
+        }
+        .tableThree td{
+            font-size:14px;
+            color:#666;
+        }
+        td {
+            padding: 5px;
+        }
+
+
+        .footer{
+            background-color:#0facf3;
+            margin-top: 15px;
+
+        }
+        .iconfont{
+            font-size:22px;
+            margin-right:5px;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#btn2").click(function(){
+                $("#div2").slideToggle();
+            });
+            $("#btn1").click(function(){
+                window.open("wangjimima.html");
+            });
+            $("#btn3").click(function(){
+                window.open("My.html");
+            });
+            $("#btn4").click(function(){
+                window.open("wangjimima.html");
+            });
+        });
+    </script>
+
+</head>
+<body style="background-color:#f5f6f7;">
+
+<div class="banner1" id="home">
+
+    <div class="header">
+        <div class="menu">
+            <a class="toggleMenu" href="#" style="color:#0facf3;"><span class="glyphicon glyphicon-menu-hamburger" style="font-size:30px;"></span></a>
+            <ul class="nav" id="nav">
+                <li class="active"><a href="index.html" class="active">主页</a></li>
+                <li><a href="about.html">免费课程</a></li>
+                <li><a href="live.html">课程直播</a></li>
+                <li><a href="forum.html">论坛</a></li>
+                <li><a href="courses0.html">学习天地</a></li>
+                <li><a href="关于我们/关于我们.html">关于我们</a></li>
+            </ul>
+            <!----start-top-nav-script---->
+            <script type="text/javascript" src="js/responsive-nav.js"></script>
+            <script type="text/javascript">
+                jQuery(document).ready(function($) {
+                    $(".scroll").click(function(event){
+                        event.preventDefault();
+                        $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+                    });
+                });
+            </script>
+            <!----//End-top-nav-script---->
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+    <!--/start-text-slider-->
+</div>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 scLeft">
+                <div class="col-md-12" style="text-align: center">
+                    <img src="images/pc-2.jpg">
+                </div>
+                <div class="col-md-12" style="text-align: center;">
+                    <p>您好，<a href="My.html">Elsa</a></p>
+                    <p style="font-size:14px">ID:16545454</p>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="btn1">修改密码</button>
+                </div>
+            </div>
+            <div class="col-md-9 scRight">
+                <section>
+                    <div class="col-md-12">
+                        <h3><i class="iconfont icon-zhuzhuangtu"></i>安全评分</h3>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                <span class="sr-only">60% Complete (warning)</span>
+                            </div>
+                        </div>
+                        <div style="position: absolute;top: 70px;left: 90%;color:#f0ad4e">60分!</div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <p style="color:#959191;font-size:14px;">账号存在隐患，请立即修复</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="btn2">立刻修复</button>
+                    </div>
+
+                    <div class="col-md-12" id="div2">
+                        <div class="col-md-12" style="border-bottom:1px solid #DAE0E4;margin-bottom:20px;margin-top:30px;">
+                            <h4><i class="iconfont icon-gerenxinxi"></i>个人信息</h4>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                    <span class="sr-only">100% Complete (success)</span>
+                                </div>
+                            </div>
+                            <div style="position: absolute;top: 21px;left: 70%;color:#5cb85c;width:50px">100分!</div>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="btn3" style="position: absolute;top: 30px;left: 85%;">修改资料</button>
+                        </div>
+                        <div class="col-md-12" style="border-bottom:1px solid #DAE0E4;margin-bottom:20px;">
+                            <h4><i class="iconfont icon-mima2"></i>账号密码</h4>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                    <span class="sr-only">80% Complete</span>
+                                </div>
+                            </div>
+                            <div style="position: absolute;top: 21px;left: 70%;color:#5bc0de;width:50px">80分!</div>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="btn4" style="position: absolute;top: 30px;left: 85%;">修改密码</button>
+                        </div>
+                        <div class="col-md-12" style="border-bottom:1px solid #DAE0E4;margin-bottom:20px;">
+                            <h4><i class="iconfont icon-renlianyanzheng"></i>人脸验证</h4>
+                            <div>
+                                <p><span class="glyphicon glyphicon-info-sign" style="color:#f0ad4e;margin-right:5px;"></span>建议完成人脸识别，提供安全保障</p>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="btn5" style="position: absolute;top: 30px;left: 85%;">完成验证</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <div class="col-md-12">
+                    <h3><i class="iconfont icon-denglujilu"></i>登录记录</h3>
+                    <p style="color:#959191;font-size:14px;margin-bottom:10px;">以下为您最近几次登录记录，若存在异常情况，请在核实后尽快<a href="wangjimima.html">修改密码</a></p>
+                    <dd>
+                        <table id="tableAll">
+                            <tbody>
+                            <tr class="tableOne">
+                                <th width="120">时间</th>
+                                <th width="120">IP</th>
+                                <th width="130">浏览器</th>
+                                <th width="130">登录方式</th>
+                                <th width="150">设备</th>
+                            </tr>
+                            <tr class="tableTwo">
+                                <td>11月05日</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="tableThree">
+                                <td>11:14:34</td>
+                                <td>117.167.*.*</td>
+                                <td>Chrome</td>
+                                <td>暂无数据</td>
+                                <td>手机端</td>
+                            </tr>
+                            <tr class="tableTwo">
+                                <td>08月29日</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="tableThree">
+                                <td>12:15:28</td>
+                                <td>117.167.*.*</td>
+                                <td>Firefox</td>
+                                <td>暂无数据</td>
+                                <td>PC端</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </dd>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="footer">
+    <div class="container">
+        <div class="footer-main">
+            <div class="col-md-6 footer-right">
+                <p><a href="index.html" target="_blank" title="爱学网" style="margin-right:10px;">爱学网</a><i class="iconfont icon-anquan-"></i>安全中心</p>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

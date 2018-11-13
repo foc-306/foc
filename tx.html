@@ -1,0 +1,36 @@
+﻿<!DOCTTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script>
+        function loadXMLDoc()
+        {
+            var xmlhttp;
+            if(widndow.XMLHttpRequest)
+            {
+                xmlhttp=new XMLHttpRequest();//支持
+            }
+            else
+            {
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");//不支持
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if(xmlhttp.readyState==4 && xmlhttp.status==200)//4请求以完成，且相应已就绪。200成功
+                {
+                    myObj = JSON.parse(xmlhttp.responseText);
+                  document.getElementById("myDiv").innerHTML=myObj.name;
+                }
+            }
+            xmlhttp.open("GET","txt/20181029.txt",true);
+            xmlhttp.send();
+        }
+    </script>
+</head>
+<body>
+<p>查看 JSON 文件数据 <a href="txt/20181029.txt" target="_blank">20181029.txt</a></p>
+<div id="myDiv"><p>使用 XMLHttpRequest 来获取文件内容</p>
+           </div>
+  <button type="button" onclick="loadXMLDoc()">修改</button>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/bootstrap/bootstrap.min.css" rel='stylesheet' type='text/css'>
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="css/toastr.css" rel="stylesheet" type="text/css" />
+    <link href="css/yuan.css" rel="stylesheet" type="text/css" />
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.fr.js"></script>
+    <script src="js/toastr.js"></script>
+
+    <style type="text/css">
+        .slider-banner{
+            color: #fff;
+            font-size: 5rem;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .cd-intro{
+            margin: 5em auto;
+            width: 90%;
+            max-width: 768px;
+            text-align: center;
+        }
+        .cd-headline{
+            line-height: 1.2;
+        }
+
+    </style>
+
+    <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+
+
+    <script type="text/javascript">
+        $(function(){
+
+//参数设置，若用默认值可以省略以下面代
+
+            toastr.options = {
+
+                "closeButton": false, //是否显示关闭按钮
+
+                "debug": false, //是否使用debug模式
+
+                "positionClass": "toast-top-full-width",//弹出窗的位置
+
+                "showDuration": "300",//显示的动画时间
+
+                "hideDuration": "1000",//消失的动画时间
+
+                "timeOut": "5000", //展现时间
+
+                "extendedTimeOut": "1000",//加长展示时间
+
+                "showEasing": "swing",//显示时的动画缓冲方式
+
+                "hideEasing": "linear",//消失时的动画缓冲方式
+
+                "showMethod": "fadeIn",//显示时的动画方式
+
+                "hideMethod": "fadeOut" //消失时的动画方式
+
+            };
+
+
+
+//成功提示绑定
+
+            $("#success").click(function(){
+
+                toastr.success("祝贺你成功了");
+
+            })
+
+
+
+//信息提示绑定
+
+            $("#info").click(function(){
+
+                toastr.info("这是一个提示信息");
+
+            })
+
+
+
+//敬告提示绑定
+
+            $("#warning").click(function(){
+
+                toastr.warning("警告你别来烦我了");
+
+            })
+
+
+
+//错语提示绑定
+
+            $("#error").click(function(){
+
+                toastr.error("出现错误，请更改");
+
+            })
+
+
+//清除窗口绑定
+
+            $("#clear").click(function(){
+
+                toastr.clear();
+
+            })
+
+        });
+
+
+
+
+
+//练习阶段代码
+        $(document).ready(function(){
+            $("#call").focus(function(){
+                $("#call").blur(function(){
+                    alert("调试");
+                });
+            });
+        });
+
+
+    </script>
+
+
+</head>
+<body>
+
+<input type="button" name="success" id="success" value="成功"/>
+
+<input type="button" name="info" id="info" value="提示"/>
+
+<input type="button" name="warning" id="warning" value="警告"/>
+
+<input type="button" name="error" id="error" value="错误"/>
+
+<input type="button" name="clear" id="clear" value="清除"/>
+
+<input name="call" id="call" placeholder="电话号码"/>
+
+<a href="" id="but1">a标签1</a>
+<a href="" id="but2">a标签2</a>
+<div style="width:100px;height:100px;background-color:#333;"></div>
+
+<button id="color">按钮</button>
+<div style="width:100px;height:100px;background-color:#666;" id="div1"></div>
+
+<div class="slider-banner">
+    <div class="cd-intro">
+        <h1 class="cd-headline clip is-full-width">
+
+									<span class="cd-words-wrapper" style="width: 416px;">
+										<b class="is-hidden">Welcome to <span> Devtheme </span></b>
+										<b class="is-visible">Digital  <span> agency </span></b>
+										<b class="is-hidden">One Page <span>  Parallax </span></b>
+									</span>
+
+        </h1>
+    </div>
+</div>
+
+
+
+</body>
+</html>
